@@ -1,17 +1,14 @@
 // ============================================
-// CONFIGURACIÓN CENTRALIZADA
+// Voelkeep Landing - script.js (limpio y consolidado)
 // ============================================
-// IMPORTANTE: Para cambiar cualquier dato (precio, teléfono, etc.)
-// solo tenés que editar este objeto
 
+// CONFIGURACIÓN CENTRALIZADA
 const CONFIG = {
-  // Contacto
   phone: '+5491123387610',
   phoneFormatted: '+54 9 11 2338-7610',
   instagram: 'voelkeep',
   instagramUrl: 'https://www.instagram.com/voelkeep',
-  
-  // Ubicación
+
   address: 'Av. Bartolomé Mitre 4240, Villa Dominico, Buenos Aires',
   addressFull: 'Av. Bartolomé Mitre 4240, B1874 Villa Dominico, Provincia de Buenos Aires',
   coordinates: {
@@ -20,15 +17,13 @@ const CONFIG = {
   },
   mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.234567890123!2d-58.33828568477!3d-34.68963437294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccde8f0c5d4e7%3A0x8b5c3d2e1f4a6b9c!2sVoelkeep%20(Cosmetologia%20Estetica)!5e0!3m2!1ses-419!2sar!4v1696789012345!5m2!1ses-419!2sar',
   mapsLink: 'https://goo.gl/maps/5RmZqoCyDr9caCu56',
-  
-  // Precios y servicios
+
   pricing: {
     sessionPrice: 35000,
     currency: '$',
     priceNote: '*Precio por sesión individual'
   },
-  
-  // Mensajes de WhatsApp
+
   messages: {
     hero: 'Hola! Quiero agendar una sesión de Gloss Peel',
     pricing: 'Hola! Quiero consultar por Gloss Peel y agendar una sesión',
@@ -36,102 +31,94 @@ const CONFIG = {
   }
 };
 
-// ============================================
-// FUNCIONES AUXILIARES
-// ============================================
-
-// Formatear precio argentino
+// UTILIDADES
 function formatPrice(price) {
   return CONFIG.pricing.currency + price.toLocaleString('es-AR');
 }
 
-// Generar URL de WhatsApp
 function generateWhatsAppUrl(message) {
   const encodedMessage = encodeURIComponent(message);
   return `https://wa.me/${CONFIG.phone.replace(/\D/g, '')}?text=${encodedMessage}`;
 }
 
-// ============================================
-// INICIALIZACIÓN AL CARGAR LA PÁGINA
-// ============================================
-
+// Init DOM
 document.addEventListener('DOMContentLoaded', function() {
-  
-  // 1. Configurar precio
+  // --- Precio
   const priceElement = document.getElementById('sessionPrice');
-  if (priceElement) {
-    priceElement.textContent = formatPrice(CONFIG.pricing.sessionPrice);
-  }
-  
-  // 2. Configurar todos los enlaces de WhatsApp
+  if (priceElement) priceElement.textContent = formatPrice(CONFIG.pricing.sessionPrice);
+
+  // --- Enlaces de WhatsApp y teléfonos
   const whatsappBtn = document.getElementById('whatsappBtn');
   const ctaHero = document.querySelector('.cta-hero');
   const ctaPricing = document.querySelector('.cta-pricing');
   const phoneLink = document.getElementById('phoneLink');
   const footerPhone = document.getElementById('footerPhone');
   const footerWhatsapp = document.getElementById('footerWhatsapp');
-  
-  if (whatsappBtn) {
-    whatsappBtn.href = generateWhatsAppUrl(CONFIG.messages.general);
-  }
-  
-  if (ctaHero) {
-    ctaHero.href = generateWhatsAppUrl(CONFIG.messages.hero);
-  }
-  
-  if (ctaPricing) {
-    ctaPricing.href = generateWhatsAppUrl(CONFIG.messages.pricing);
-  }
-  
-  if (phoneLink) {
-    phoneLink.href = generateWhatsAppUrl(CONFIG.messages.general);
-    phoneLink.textContent = CONFIG.phoneFormatted;
-  }
-  
-  if (footerPhone) {
-    footerPhone.href = generateWhatsAppUrl(CONFIG.messages.general);
-    footerPhone.textContent = CONFIG.phoneFormatted;
-  }
-  
-  if (footerWhatsapp) {
-    footerWhatsapp.href = generateWhatsAppUrl(CONFIG.messages.general);
-  }
-  
-  // 3. Configurar dirección y link a Google Maps
+
+  if (whatsappBtn) whatsappBtn.href = generateWhatsAppUrl(CONFIG.messages.general);
+  if (ctaHero) ctaHero.href = generateWhatsAppUrl(CONFIG.messages.hero);
+  if (ctaPricing) ctaPricing.href = generateWhatsAppUrl(CONFIG.messages.pricing);
+  if (phoneLink) { phoneLink.href = generateWhatsAppUrl(CONFIG.messages.general); phoneLink.textContent = CONFIG.phoneFormatted; }
+  if (footerPhone) { footerPhone.href = generateWhatsAppUrl(CONFIG.messages.general); footerPhone.textContent = CONFIG.phoneFormatted; }
+  if (footerWhatsapp) footerWhatsapp.href = generateWhatsAppUrl(CONFIG.messages.general);
+
+  // --- Dirección
   const addressLink = document.getElementById('addressLink');
-  if (addressLink) {
-    addressLink.href = CONFIG.mapsLink;
-  }
-  
-  // 4. Cargar mapa de Google
+  if (addressLink) addressLink.href = CONFIG.mapsLink;
+  const addressText = document.getElementById('addressText');
+  if (addressText) addressText.textContent = CONFIG.addressFull || CONFIG.address;
+
+  // --- Mapa: handlers, asignación de src con fallback
   const googleMap = document.getElementById('googleMap');
   const mapLoader = document.getElementById('mapLoader');
-  
+
   if (googleMap && mapLoader) {
-    // Mostrar loader mientras carga
+    mapLoader.textContent = 'Cargando mapa...';
     googleMap.style.opacity = '0';
-    
-    // Configurar el src del iframe
-    googleMap.src = CONFIG.mapUrl;
-    
-    // Cuando el mapa cargue, ocultar loader
+
     googleMap.onload = function() {
+      console.log('Mapa cargado: onload fired');
       mapLoader.style.display = 'none';
       googleMap.style.opacity = '1';
       googleMap.style.transition = 'opacity 0.5s ease';
     };
-    
-    // Si falla la carga del mapa
+
     googleMap.onerror = function() {
+      console.error('Error al cargar el iframe del mapa');
       mapLoader.textContent = 'No se pudo cargar el mapa. Contactanos por WhatsApp.';
       mapLoader.style.color = '#C94C7C';
     };
+
+    try {
+      googleMap.src = CONFIG.mapUrl;
+      console.log('Map iframe src asignado desde CONFIG');
+
+      const fallbackTimeout = setTimeout(() => {
+        if (mapLoader && mapLoader.style.display !== 'none') {
+          const lat = CONFIG.coordinates && CONFIG.coordinates.lat;
+          const lng = CONFIG.coordinates && CONFIG.coordinates.lng;
+          if (lat && lng) {
+            const fallback = 'https://www.google.com/maps?q=' + lat + ',' + lng + '&z=16&output=embed';
+            console.warn('Mapa principal no respondió: aplicando fallback:', fallback);
+            googleMap.src = fallback;
+          } else {
+            console.warn('Mapa principal no respondió y no hay coordenadas para fallback');
+          }
+        }
+      }, 3000);
+
+      const originalOnload = googleMap.onload;
+      googleMap.onload = function() {
+        clearTimeout(fallbackTimeout);
+        if (typeof originalOnload === 'function') originalOnload();
+      };
+    } catch (err) {
+      console.error('Error asignando src al iframe del mapa:', err);
+    }
   }
-  
-  // 5. Animaciones al hacer scroll
+
+  // Animaciones y utilidades
   initScrollReveal();
-  
-  // 6. Smooth scroll para enlaces internos
   initSmoothScroll();
 });
 
@@ -316,10 +303,10 @@ function showPromoMessage(message, duration = 5000) {
     text-align: center;
     animation: slideDown 0.5s ease;
   `;
-  
+
   promo.textContent = message;
   document.body.appendChild(promo);
-  
+
   // Remover después del tiempo especificado
   setTimeout(() => {
     promo.style.animation = 'slideUp 0.5s ease';
