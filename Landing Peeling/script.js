@@ -12,8 +12,14 @@ const CONFIG = {
   instagramUrl: 'https://www.instagram.com/voelkeep',
   
   // Ubicación
-  address: 'Consultá nuestra ubicación exacta por WhatsApp',
-  mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0168080449854!2d-58.381592!3d-34.603722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacb9f8ff113%3A0x22fd08b2c2d8e830!2sVoelkeep!5e0!3m2!1ses!2sar!4v1234567890',
+  address: 'Av. Bartolomé Mitre 4240, Villa Dominico, Buenos Aires',
+  addressFull: 'Av. Bartolomé Mitre 4240, B1874 Villa Dominico, Provincia de Buenos Aires',
+  coordinates: {
+    lat: -34.68963435116331,
+    lng: -58.3360788332687
+  },
+  mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.234567890123!2d-58.33828568477!3d-34.68963437294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccde8f0c5d4e7%3A0x8b5c3d2e1f4a6b9c!2sVoelkeep%20(Cosmetologia%20Estetica)!5e0!3m2!1ses-419!2sar!4v1696789012345!5m2!1ses-419!2sar',
+  mapsLink: 'https://goo.gl/maps/5RmZqoCyDr9caCu56',
   
   // Precios y servicios
   pricing: {
@@ -91,10 +97,10 @@ document.addEventListener('DOMContentLoaded', function() {
     footerWhatsapp.href = generateWhatsAppUrl(CONFIG.messages.general);
   }
   
-  // 3. Configurar dirección
-  const addressText = document.getElementById('addressText');
-  if (addressText) {
-    addressText.textContent = CONFIG.address;
+  // 3. Configurar dirección y link a Google Maps
+  const addressLink = document.getElementById('addressLink');
+  if (addressLink) {
+    addressLink.href = CONFIG.mapsLink;
   }
   
   // 4. Cargar mapa de Google
