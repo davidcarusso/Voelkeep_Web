@@ -31,6 +31,58 @@ const CONFIG = {
   }
 };
 
+// Set address text/link safely (call immediately and again on DOMContentLoaded)
+function applyAddressText() {
+  try {
+    const addressText = document.getElementById('addressText');
+    if (addressText) {
+      addressText.textContent = CONFIG.addressFull || CONFIG.address;
+      console.log('applyAddressText: addressText updated:', addressText.textContent);
+    } else {
+      console.log('applyAddressText: #addressText not found yet');
+    }
+
+    const addressLink = document.getElementById('addressLink');
+    if (addressLink) {
+      addressLink.href = CONFIG.mapsLink;
+      console.log('applyAddressText: addressLink updated:', addressLink.href);
+    }
+  } catch (err) {
+    console.error('applyAddressText error:', err);
+  }
+}
+
+// Try to apply immediately in case script is loaded after body
+applyAddressText();
+
+// Log that the script executed and current location (useful on GitHub Pages)
+console.log('script.js loaded — location.href=', location.href);
+
+// Polling fallback: intenta varias veces si el elemento no está presente todavía
+function pollApplyAddressText(retries = 10, interval = 200) {
+  let attempts = 0;
+  const id = setInterval(() => {
+    attempts++;
+    const el = document.getElementById('addressText');
+    if (el) {
+      el.textContent = CONFIG.addressFull || CONFIG.address;
+      console.log(`pollApplyAddressText: success on attempt ${attempts}`);
+      const link = document.getElementById('addressLink');
+      if (link) link.href = CONFIG.mapsLink;
+      clearInterval(id);
+      return;
+    }
+    if (attempts >= retries) {
+      console.warn('pollApplyAddressText: element #addressText not found after', attempts, 'attempts');
+      clearInterval(id);
+    } else {
+      console.log('pollApplyAddressText: attempt', attempts, '— not found yet');
+    }
+  }, interval);
+}
+
+pollApplyAddressText(15, 250);
+
 // UTILIDADES
 function formatPrice(price) {
   return CONFIG.pricing.currency + price.toLocaleString('es-AR');
