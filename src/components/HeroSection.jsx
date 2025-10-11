@@ -24,7 +24,7 @@ const HeroSection = ({
       <div className="container">
         <div className="hero-content">
           <span className="hero-badge fade-in">{badge}</span>
-          <h1 className="fade-in">{title}</h1>
+          <h1 className="">{title}</h1>
           <p className="hero-subtitle fade-in">{subtitle}</p>
           <p className="hero-description fade-in">{description}</p>
           

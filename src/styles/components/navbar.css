@@ -51,6 +51,7 @@
   height: 40px;
   width: auto;
   transition: var(--transition-normal);
+  color: var(--magenta-oscuro);
 }
 
 .navbar-brand:hover .navbar-logo {
@@ -59,10 +60,6 @@
 
 .navbar-name {
   letter-spacing: 2px;
-  background: linear-gradient(135deg, var(--magenta-oscuro), var(--rosa-fuerte));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 /* Menu */

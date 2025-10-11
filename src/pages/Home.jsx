@@ -46,7 +46,7 @@ const Home = () => {
       </section>
 
       {/* Servicios Destacados */}
-      <section className="featured-services">
+      <section className="featured-services" id="tratamientos">
         <div className="container">
           <h2 className="section-title scroll-reveal">Nuestros tratamientos destacados</h2>
           <div className="services-grid">
@@ -112,7 +112,7 @@ const Home = () => {
       </section>
 
       {/* Por qué elegirnos */}
-      <section className="why-us" id="tratamientos">
+      <section className="why-us">
         <div className="container">
           <h2 className="section-title scroll-reveal">¿Por qué elegir Voelkeep?</h2>
           <div className="reasons-grid">
