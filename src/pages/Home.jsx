@@ -25,7 +25,7 @@ const Home = () => {
         <div className="container">
           <div className="hero-content">
             <span className="hero-badge fade-in">Cosmetología Profesional</span>
-            <h1 className="fade-in">VOELKEEP</h1>
+            <h1 className="">VOELKEEP</h1>
             <p className="hero-subtitle fade-in">Renovamos tu piel, renovamos tu bienestar</p>
             <p className="hero-description fade-in">
               Centro de estética profesional especializado en tratamientos faciales y corporales con productos magistrales

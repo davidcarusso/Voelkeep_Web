@@ -51,11 +51,14 @@
   height: 40px;
   width: auto;
   transition: var(--transition-normal);
-  color: var(--magenta-oscuro);
+  /* Cambiar color del SVG a magenta */
+  filter: brightness(0) saturate(100%) invert(29%) sepia(87%) saturate(2799%) hue-rotate(305deg) brightness(94%) contrast(98%);
 }
 
 .navbar-brand:hover .navbar-logo {
   transform: scale(1.05);
+  /* Color más brillante al hacer hover */
+  filter: brightness(0) saturate(100%) invert(39%) sepia(97%) saturate(2899%) hue-rotate(305deg) brightness(104%) contrast(98%);
 }
 
 .navbar-name {
