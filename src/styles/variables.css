@@ -1,0 +1,42 @@
+/* ============================================
+   VARIABLES CSS
+   ============================================ */
+:root {
+  /* Paleta de colores Voelkeep */
+  --magenta-oscuro: #8B1E5A;
+  --rosa-fuerte: #C94C7C;
+  --rosa-medio: #E88BA0;
+  --rosa-claro: #F7C1D0;
+  --rosa-pastel: #FCE4EC;
+  
+  /* Colores auxiliares */
+  --blanco: #FFFFFF;
+  --gris-claro: #F5F5F5;
+  --gris-medio: #E0E0E0;
+  --texto-oscuro: #2C2C2C;
+  --texto-gris: #666666;
+  
+  /* Sombras */
+  --shadow-sm: 0 2px 10px rgba(139, 30, 90, 0.08);
+  --shadow-md: 0 8px 30px rgba(139, 30, 90, 0.12);
+  --shadow-lg: 0 12px 40px rgba(139, 30, 90, 0.18);
+  --shadow-xl: 0 20px 60px rgba(139, 30, 90, 0.25);
+  
+  /* Transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Espaciado */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+  
+  /* Bordes */
+  --radius-sm: 8px;
+  --radius-md: 15px;
+  --radius-lg: 25px;
+  --radius-full: 50px;
+}

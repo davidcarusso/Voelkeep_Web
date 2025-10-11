@@ -1,0 +1,249 @@
+/* ============================================
+   COMPONENTE: HERO SECTION
+   ============================================ */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--magenta-oscuro) 0%, var(--rosa-fuerte) 50%, var(--rosa-medio) 100%);
+  overflow: hidden;
+  text-align: center;
+  color: var(--blanco);
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0.3;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+}
+
+.circle-1 {
+  width: 500px;
+  height: 500px;
+  top: -150px;
+  right: -150px;
+  animation: float 20s ease-in-out infinite;
+}
+
+.circle-2 {
+  width: 400px;
+  height: 400px;
+  bottom: -100px;
+  left: -100px;
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+.circle-3 {
+  width: 300px;
+  height: 300px;
+  top: 40%;
+  left: 20%;
+  animation: float 30s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  animation: heroFadeIn 1s ease-out forwards;
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 10px 25px;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.5s ease;
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+.hero-badge:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.hero h1 {
+  font-size: clamp(4rem, 10vw, 7rem);
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 25px rgba(0,0,0,0.3);
+  animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-subtitle {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 300;
+  margin-bottom: 25px;
+  opacity: 0.95;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  animation: fadeInUp 0.8s ease-out 0.6s backwards;
+}
+
+.hero-description {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 400;
+  margin-bottom: 45px;
+  opacity: 0.9;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+  font-family: 'Montserrat', sans-serif;
+  animation: fadeInUp 0.8s ease-out 0.8s backwards;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.8s ease-out 1s backwards;
+}
+
+/* Hero con imagen de fondo */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(139, 30, 90, 0.85), rgba(201, 76, 124, 0.75));
+  z-index: 0;
+}
+
+/* Hero Container para gift card */
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-card-container {
+  position: relative;
+  z-index: 1;
+}
+
+.giftcard-3d {
+  perspective: 1000px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.giftcard-image {
+  width: 100%;
+  max-width: 450px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  transition: transform 0.3s ease;
+}
+
+.giftcard-3d:hover .giftcard-image {
+  transform: rotateY(5deg) rotateX(5deg);
+}
+
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .hero-card-container {
+    order: -1;
+  }
+  
+  .giftcard-image {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 90vh;
+  }
+  
+  .hero-content {
+    padding: 40px 20px;
+  }
+  
+  .hero-badge {
+    font-size: 0.85rem;
+    padding: 8px 20px;
+  }
+  
+  .circle-1, .circle-2, .circle-3 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    letter-spacing: 4px;
+  }
+  
+  .hero-ctas {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .hero-ctas .cta-button {
+    width: 100%;
+  }
+}
