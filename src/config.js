@@ -53,7 +53,25 @@ export const CONFIG = {
   whatsappMessages: {
     general: 'Hola! Quiero consultar sobre los tratamientos de Voelkeep',
     agendar: 'Hola! Quiero agendar un turno para tratamiento facial',
+    
+    // Tratamientos Faciales
     glossPeel: 'Hola! Quiero consultar sobre el tratamiento Gloss Peel',
+    limpiezaProfunda: 'Hola! Quiero consultar sobre la Limpieza Facial Profunda',
+    peelingFacial: 'Hola! Quiero consultar sobre el Peeling Facial',
+    dermaplaning: 'Hola! Quiero consultar sobre el Dermaplaning',
+    microneedling: 'Hola! Quiero consultar sobre el Microneedling',
+    radiofrecuencia: 'Hola! Quiero consultar sobre la Radiofrecuencia Multipolar',
+    hidralips: 'Hola! Quiero consultar sobre el tratamiento Hidralips',
+    
+    // Tratamientos Corporales
+    reductores: 'Hola! Quiero consultar sobre los Tratamientos Reductores',
+    reafirmantes: 'Hola! Quiero consultar sobre los Tratamientos Reafirmantes',
+    anticeluliticos: 'Hola! Quiero consultar sobre los Tratamientos Anticelulíticos',
+    
+    // Asesoramiento
+    asesoramiento: 'Hola! Quiero consultar sobre el Asesoramiento de Skincare personalizado',
+    
+    // Legacy
     limpieza: 'Hola! Quiero consultar sobre la Limpieza Facial Profunda',
     ritual: 'Hola! Quiero consultar sobre el Ritual Corporal',
     giftCard: 'Hola! Quiero consultar sobre las Gift Cards de Voelkeep',

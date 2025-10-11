@@ -49,6 +49,9 @@ const Home = () => {
       <section className="featured-services" id="tratamientos">
         <div className="container">
           <h2 className="section-title scroll-reveal">Nuestros tratamientos destacados</h2>
+          
+          {/* Tratamientos Faciales */}
+          <h3 className="subsection-title scroll-reveal">✨ Tratamientos Faciales</h3>
           <div className="services-grid">
             
             <ServiceCard
@@ -67,27 +70,143 @@ const Home = () => {
             <ServiceCard
               icon="💎"
               title="Limpieza Facial Profunda"
-              description="Tratamiento completo de limpieza con punta de diamante y extracciones profesionales."
+              description="El primer paso para una piel sana y luminosa. Elimina impurezas y células muertas."
               features={[
+                'Vaporización y extracción',
                 'Exfoliación completa',
-                'Microdermoabrasión',
-                'Hidratación personalizada'
+                'Mascarilla personalizada'
               ]}
-              whatsappKey="limpieza"
-              linkText="Consultar"
+              linkTo="/limpieza-profunda"
+              linkText="Conocer más"
             />
 
             <ServiceCard
-              icon="💆‍♀️"
-              title="Ritual Corporal"
-              description="Experiencia completa de renovación y relajación corporal con productos de alta calidad."
+              icon="🌟"
+              title="Peeling Facial"
+              description="Renovación celular para mejorar textura, luminosidad y uniformidad de la piel."
               features={[
-                'Exfoliación corporal',
-                'Hidratación integral',
-                'Relajación profunda'
+                'Reduce manchas y líneas',
+                'Mejora la textura',
+                'Diferentes intensidades'
               ]}
-              whatsappKey="ritual"
-              linkText="Consultar"
+              linkTo="/peeling-facial"
+              linkText="Conocer más"
+            />
+
+            <ServiceCard
+              icon="💫"
+              title="Dermaplaning"
+              description="Piel de porcelana al instante. Elimina vello fino y células muertas sin dolor."
+              features={[
+                'Piel ultra suave',
+                'Efecto inmediato',
+                'Sin tiempo de recuperación'
+              ]}
+              linkTo="/dermaplaning"
+              linkText="Conocer más"
+            />
+
+            <ServiceCard
+              icon="🔬"
+              title="Microneedling"
+              description="Estimula colágeno y elastina naturalmente. Reduce cicatrices y mejora la textura."
+              features={[
+                'Regeneración natural',
+                'Reduce cicatrices de acné',
+                'Resultados progresivos'
+              ]}
+              linkTo="/microneedling"
+              linkText="Conocer más"
+            />
+
+            <ServiceCard
+              icon="⚡"
+              title="Radiofrecuencia Multipolar"
+              description="Reafirma y rejuvenece sin cirugía. Estimula colágeno en capas profundas."
+              features={[
+                'Efecto lifting natural',
+                'Sin dolor ni molestias',
+                'Resultados duraderos'
+              ]}
+              linkTo="/radiofrecuencia"
+              linkText="Conocer más"
+            />
+
+            <ServiceCard
+              icon="💋"
+              title="Hidralips"
+              description="Hidratación intensiva para labios suaves con brillo natural, sin inyecciones."
+              features={[
+                'Labios más suaves',
+                'Efecto gloss natural',
+                'Sin agujas'
+              ]}
+              linkTo="/hidralips"
+              linkText="Conocer más"
+            />
+
+          </div>
+
+          {/* Tratamientos Corporales */}
+          <h3 className="subsection-title scroll-reveal" style={{ marginTop: '4rem' }}>💆‍♀️ Tratamientos Corporales</h3>
+          <div className="services-grid">
+            
+            <ServiceCard
+              icon="📏"
+              title="Tratamientos Reductores"
+              description="Modela tu figura y reduce volumen en zonas específicas del cuerpo."
+              features={[
+                'Reduce medidas',
+                'Elimina toxinas',
+                'Mejora la circulación'
+              ]}
+              linkTo="/reductores"
+              linkText="Conocer más"
+            />
+
+            <ServiceCard
+              icon="💪"
+              title="Tratamientos Reafirmantes"
+              description="Recupera la firmeza y elasticidad de tu piel corporal."
+              features={[
+                'Combate la flacidez',
+                'Estimula colágeno',
+                'Piel más firme'
+              ]}
+              linkTo="/reafirmantes"
+              linkText="Conocer más"
+            />
+
+            <ServiceCard
+              icon="🌊"
+              title="Tratamientos Anticelulíticos"
+              description="Reduce la celulitis y mejora la textura de la piel corporal."
+              features={[
+                'Reduce piel de naranja',
+                'Mejora circulación',
+                'Drenaje linfático'
+              ]}
+              linkTo="/anticeluliticos"
+              linkText="Conocer más"
+            />
+
+          </div>
+
+          {/* Asesoramiento */}
+          <h3 className="subsection-title scroll-reveal" style={{ marginTop: '4rem' }}>📋 Asesoramiento Personalizado</h3>
+          <div className="services-grid">
+            
+            <ServiceCard
+              icon="🎯"
+              title="Asesoramiento de Skincare"
+              description="Diagnóstico profesional y diseño de rutina personalizada para tu piel."
+              features={[
+                'Diagnóstico completo',
+                'Rutina a tu medida',
+                'Seguimiento continuo'
+              ]}
+              linkTo="/asesoramiento"
+              linkText="Conocer más"
             />
 
           </div>

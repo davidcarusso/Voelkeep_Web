@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { generateWhatsAppUrl } from '@/config';
 
@@ -6,8 +6,10 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
   const [lastScroll, setLastScroll] = useState(0);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,8 +38,26 @@ const Navbar = () => {
   useEffect(() => {
     // Cerrar menú al cambiar de ruta
     setIsMenuOpen(false);
+    setIsDropdownOpen(false);
     document.body.style.overflow = '';
   }, [location]);
+
+  // Cerrar dropdown al hacer clic fuera
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    if (isDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isDropdownOpen]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -46,7 +66,32 @@ const Navbar = () => {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+    setIsDropdownOpen(false);
     document.body.style.overflow = '';
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const servicios = {
+    faciales: [
+      { nombre: 'Limpieza Profunda', ruta: '/limpieza-profunda' },
+      { nombre: 'Peeling Facial', ruta: '/peeling-facial' },
+      { nombre: 'Dermaplaning', ruta: '/dermaplaning' },
+      { nombre: 'Microneedling', ruta: '/microneedling' },
+      { nombre: 'Radiofrecuencia', ruta: '/radiofrecuencia' },
+      { nombre: 'Hidralips', ruta: '/hidralips' },
+      { nombre: 'Gloss Peel', ruta: '/gloss-peel' },
+    ],
+    corporales: [
+      { nombre: 'Reductores', ruta: '/reductores' },
+      { nombre: 'Reafirmantes', ruta: '/reafirmantes' },
+      { nombre: 'Anticelulíticos', ruta: '/anticeluliticos' },
+    ],
+    asesoramiento: [
+      { nombre: 'Asesoramiento Skincare', ruta: '/asesoramiento' },
+    ]
   };
 
   return (
@@ -75,12 +120,70 @@ const Navbar = () => {
             <Link to="/" className="navbar-link" onClick={closeMenu}>
               Inicio
             </Link>
-            <a href="/#tratamientos" className="navbar-link" onClick={closeMenu}>
-              Tratamientos
-            </a>
-            <Link to="/gloss-peel" className="navbar-link" onClick={closeMenu}>
-              Gloss Peel
-            </Link>
+            
+            {/* Menú desplegable de Tratamientos */}
+            <div className="navbar-dropdown" ref={dropdownRef}>
+              <button 
+                className={`navbar-link dropdown-trigger ${isDropdownOpen ? 'active' : ''}`}
+                onClick={toggleDropdown}
+              >
+                Tratamientos
+                <span className="dropdown-arrow">▼</span>
+              </button>
+              
+              <div className={`dropdown-menu ${isDropdownOpen ? 'active' : ''}`}>
+                <div className="dropdown-content">
+                  <div className="dropdown-section">
+                    <h4 className="dropdown-title">✨ Tratamientos Faciales</h4>
+                    {servicios.faciales.map((servicio, index) => (
+                      <Link 
+                        key={index}
+                        to={servicio.ruta} 
+                        className="dropdown-item"
+                        onClick={closeMenu}
+                      >
+                        {servicio.nombre}
+                      </Link>
+                    ))}
+                  </div>
+                  
+                  <div className="dropdown-section">
+                    <h4 className="dropdown-title">💆‍♀️ Tratamientos Corporales</h4>
+                    {servicios.corporales.map((servicio, index) => (
+                      <Link 
+                        key={index}
+                        to={servicio.ruta} 
+                        className="dropdown-item"
+                        onClick={closeMenu}
+                      >
+                        {servicio.nombre}
+                      </Link>
+                    ))}
+                  </div>
+                  
+                  <div className="dropdown-section">
+                    <h4 className="dropdown-title">📋 Asesoramiento</h4>
+                    {servicios.asesoramiento.map((servicio, index) => (
+                      <Link 
+                        key={index}
+                        to={servicio.ruta} 
+                        className="dropdown-item"
+                        onClick={closeMenu}
+                      >
+                        {servicio.nombre}
+                      </Link>
+                    ))}
+                  </div>
+                  
+                  <div className="dropdown-section">
+                    <a href="/#tratamientos" className="dropdown-view-all" onClick={closeMenu}>
+                      Ver todos los tratamientos →
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
             <Link to="/gift-card" className="navbar-link" onClick={closeMenu}>
               Gift Cards
             </Link>

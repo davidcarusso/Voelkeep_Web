@@ -15,6 +15,22 @@ import GlossPeel from '@/pages/GlossPeel';
 import GiftCard from '@/pages/GiftCard';
 import NotFound from '@/pages/NotFound';
 
+// Tratamientos Faciales
+import LimpiezaProfunda from '@/pages/LimpiezaProfunda';
+import PeelingFacial from '@/pages/PeelingFacial';
+import Dermaplaning from '@/pages/Dermaplaning';
+import Microneedling from '@/pages/Microneedling';
+import Radiofrecuencia from '@/pages/Radiofrecuencia';
+import Hidralips from '@/pages/Hidralips';
+
+// Tratamientos Corporales
+import Reductores from '@/pages/Reductores';
+import Reafirmantes from '@/pages/Reafirmantes';
+import Anticeluliticos from '@/pages/Anticeluliticos';
+
+// Asesoramiento
+import Asesoramiento from '@/pages/Asesoramiento';
+
 // Estilos
 import '@/styles/main.css';
 
@@ -33,7 +49,25 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            
+            {/* Tratamientos Faciales */}
             <Route path="/gloss-peel" element={<GlossPeel />} />
+            <Route path="/limpieza-profunda" element={<LimpiezaProfunda />} />
+            <Route path="/peeling-facial" element={<PeelingFacial />} />
+            <Route path="/dermaplaning" element={<Dermaplaning />} />
+            <Route path="/microneedling" element={<Microneedling />} />
+            <Route path="/radiofrecuencia" element={<Radiofrecuencia />} />
+            <Route path="/hidralips" element={<Hidralips />} />
+            
+            {/* Tratamientos Corporales */}
+            <Route path="/reductores" element={<Reductores />} />
+            <Route path="/reafirmantes" element={<Reafirmantes />} />
+            <Route path="/anticeluliticos" element={<Anticeluliticos />} />
+            
+            {/* Asesoramiento */}
+            <Route path="/asesoramiento" element={<Asesoramiento />} />
+            
+            {/* Otros */}
             <Route path="/gift-card" element={<GiftCard />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

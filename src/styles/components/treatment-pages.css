@@ -1,0 +1,695 @@
+/* ============================================
+   ESTILOS PARA PÁGINAS DE SERVICIOS
+   ============================================ */
+
+/* Sección de Beneficios */
+.benefits-section {
+  padding: 4rem 0;
+  background: white;
+}
+
+.benefits-section .section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--texto-oscuro);
+  margin-bottom: 3rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gris-medio);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, var(--magenta-oscuro), var(--rosa-fuerte));
+  transform: scaleX(0);
+  transition: transform var(--transition-normal);
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--rosa-fuerte);
+}
+
+.benefit-card:hover::before {
+  transform: scaleX(1);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  transition: transform var(--transition-normal);
+}
+
+.benefit-card:hover .benefit-icon {
+  transform: scale(1.1);
+}
+
+.benefit-card h3 {
+  font-size: 1.2rem;
+  color: var(--texto-oscuro);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.benefit-card p {
+  color: var(--texto-gris);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Detalles del Tratamiento */
+.treatment-details,
+.service-details {
+  padding: 4rem 0;
+  background: var(--gris-claro);
+}
+
+.detail-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.detail-content h2 {
+  font-size: 2rem;
+  color: var(--texto-oscuro);
+  margin-bottom: 1.5rem;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--texto-gris);
+  margin-bottom: 2.5rem;
+}
+
+/* Pasos del tratamiento */
+.treatment-steps,
+.process-steps {
+  display: grid;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.step,
+.process-step {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.step:hover,
+.process-step:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--magenta-oscuro), var(--rosa-fuerte));
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.step h3,
+.process-step h3 {
+  font-size: 1.3rem;
+  color: var(--texto-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+.step p,
+.process-step p {
+  color: var(--texto-gris);
+  line-height: 1.6;
+}
+
+/* Tipos de tratamiento */
+.types-grid,
+.techniques-grid,
+.methods-grid,
+.approach-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.type-card,
+.technique-card,
+.method-card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--gris-medio);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.type-card:hover,
+.technique-card:hover,
+.method-card:hover {
+  border-color: var(--rosa-fuerte);
+  transform: translateY(-5px);
+}
+
+.type-card h3,
+.technique-card h3,
+.method-card h3 {
+  color: var(--texto-oscuro);
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.technique-card .icon,
+.method-card .icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Highlight box */
+.highlight-box,
+.tip-box,
+.important-note {
+  background: linear-gradient(135deg, rgba(231, 139, 160, 0.1), rgba(252, 228, 236, 0.5));
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--rosa-fuerte);
+  margin-top: 2rem;
+}
+
+.highlight-box h3,
+.tip-box h3,
+.important-note h3 {
+  color: var(--texto-oscuro);
+  margin-bottom: 0.8rem;
+}
+
+/* Para quién es */
+.ideal-for {
+  padding: 4rem 0;
+  background: white;
+}
+
+.ideal-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ideal-content h2 {
+  font-size: 2rem;
+  color: var(--texto-oscuro);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.ideal-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ideal-list li {
+  padding: 0.8rem 0;
+  font-size: 1.1rem;
+  color: var(--texto-gris);
+  border-bottom: 1px solid var(--gris-medio);
+}
+
+.ideal-list li:last-child {
+  border-bottom: none;
+}
+
+.note,
+.note-center {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--gris-claro);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  color: var(--texto-gris);
+}
+
+.note-center {
+  text-align: center;
+}
+
+.highlight {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--texto-oscuro);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+/* Zonas de tratamiento */
+.treatment-zones,
+.treatment-areas {
+  padding: 4rem 0;
+  background: var(--gris-claro);
+}
+
+.zones-content,
+.areas-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.zones-content h2,
+.areas-content h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--texto-oscuro);
+  margin-bottom: 2rem;
+}
+
+.zones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.zone-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  font-weight: 500;
+  color: var(--texto-oscuro);
+  box-shadow: var(--shadow-sm);
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.area-card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal);
+}
+
+.area-card:hover {
+  transform: translateY(-5px);
+}
+
+.area-card h3 {
+  font-size: 1.3rem;
+  color: var(--texto-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+/* Grados de celulitis */
+.cellulite-grades {
+  padding: 4rem 0;
+  background: white;
+}
+
+.grades-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.grades-content h2 {
+  font-size: 2rem;
+  color: var(--texto-oscuro);
+  margin-bottom: 2rem;
+}
+
+.grades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.grade-card {
+  background: var(--gris-claro);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-normal);
+}
+
+.grade-card:hover {
+  transform: scale(1.05);
+}
+
+.grade-number {
+  display: inline-block;
+  background: var(--rosa-fuerte);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  line-height: 60px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.grade-card h3 {
+  color: var(--texto-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+/* Situaciones ideales */
+.ideal-situations {
+  padding: 4rem 0;
+  background: var(--gris-claro);
+}
+
+.situations-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.situations-content h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--texto-oscuro);
+  margin-bottom: 2rem;
+}
+
+.situations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.situation-card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.situation-card h3 {
+  color: var(--texto-oscuro);
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Proceso de consulta */
+.consultation-process {
+  padding: 4rem 0;
+  background: white;
+}
+
+.process-step {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.step-content {
+  flex: 1;
+}
+
+/* Includes section */
+.includes-section {
+  padding: 4rem 0;
+  background: var(--gris-claro);
+}
+
+.includes-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.includes-content h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--texto-oscuro);
+  margin-bottom: 2rem;
+}
+
+.includes-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.include-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.include-item .check {
+  font-size: 1.5rem;
+  color: var(--rosa-fuerte);
+  flex-shrink: 0;
+}
+
+.include-item h3 {
+  color: var(--texto-oscuro);
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.include-item p {
+  color: var(--texto-gris);
+  font-size: 0.95rem;
+}
+
+/* Diferencia section */
+.difference-section {
+  padding: 4rem 0;
+  background: white;
+}
+
+.difference-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.difference-content h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--texto-oscuro);
+  margin-bottom: 2rem;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.comparison-card {
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.comparison-card.without {
+  background: rgba(255, 0, 0, 0.05);
+  border: 2px solid rgba(255, 0, 0, 0.1);
+}
+
+.comparison-card.with {
+  background: rgba(232, 139, 160, 0.1);
+  border: 2px solid var(--rosa-fuerte);
+}
+
+.comparison-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.comparison-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.comparison-card ul li {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.comparison-card.without ul li {
+  color: var(--texto-gris);
+}
+
+.comparison-card.with ul li {
+  color: var(--texto-oscuro);
+}
+
+/* Proceso timeline */
+.process-timeline {
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+.timeline-step {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  align-items: flex-start;
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--magenta-oscuro), var(--rosa-fuerte));
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.timeline-step h3 {
+  color: var(--texto-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-step p {
+  color: var(--texto-gris);
+  line-height: 1.6;
+}
+
+/* Tech features */
+.tech-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tech-card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.tech-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.tech-card h3 {
+  color: var(--texto-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+/* Subsection titles */
+.subsection-title {
+  font-size: 1.8rem;
+  color: var(--texto-oscuro);
+  margin: 3rem 0 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Process section */
+.process-section {
+  padding: 4rem 0;
+  background: var(--gris-claro);
+}
+
+.process-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.process-content h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--texto-oscuro);
+  margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .treatment-steps,
+  .types-grid,
+  .techniques-grid,
+  .methods-grid,
+  .zones-grid,
+  .areas-grid,
+  .situations-grid,
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-step,
+  .timeline-step {
+    flex-direction: column;
+  }
+
+  .step-number,
+  .step-num {
+    margin: 0 auto 1rem;
+  }
+
+  .detail-content h2,
+  .zones-content h2,
+  .areas-content h2,
+  .grades-content h2,
+  .situations-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .subsection-title {
+    font-size: 1.4rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
