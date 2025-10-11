@@ -276,6 +276,20 @@ img {
   background: var(--rosa-pastel);
 }
 
+
+/* Banner Span  */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
+
 /* ============================================
    ANIMACIÓN 3D DE LA GIFT CARD
    ============================================ */

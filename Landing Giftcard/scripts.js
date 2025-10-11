@@ -666,6 +666,38 @@ if (!Element.prototype.closest) {
   };
 }
 
+
+// Banner de Span en hero
+
+document.addEventListener("DOMContentLoaded", () => {
+  const frases = [
+    "El regalo perfecto",
+    "Sorprendé con bienestar",
+    "Un detalle único",
+    "Regalá experiencias",
+    "Bienestar para quien querés"
+  ];
+
+  let i = 0;
+  const span = document.getElementById("changing-text");
+
+  function cambiarFrase() {
+    span.classList.remove("fade-in");
+    void span.offsetWidth; // truco para reiniciar la animación CSS
+    span.classList.add("fade-in");
+
+    span.textContent = frases[i];
+    i = (i + 1) % frases.length;
+  }
+
+  // Primera frase
+  cambiarFrase();
+
+  // Cambia cada 3 segundos
+  setInterval(cambiarFrase, 3000);
+});
+
+
 // ============================================
 // EJEMPLO DE USO DESDE LA CONSOLA
 // ============================================
