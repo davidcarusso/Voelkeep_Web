@@ -7,11 +7,13 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import ScrollProgress from '@/components/ScrollProgress';
 import BackToTop from '@/components/BackToTop';
+import ScrollToTop from '@/components/ScrollToTop';
 
 // Páginas
 import Home from '@/pages/Home';
 import GlossPeel from '@/pages/GlossPeel';
 import GiftCard from '@/pages/GiftCard';
+import NotFound from '@/pages/NotFound';
 
 // Estilos
 import '@/styles/main.css';
@@ -23,6 +25,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <ScrollProgress />
         <Navbar />
@@ -32,6 +35,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/gloss-peel" element={<GlossPeel />} />
             <Route path="/gift-card" element={<GiftCard />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
 
