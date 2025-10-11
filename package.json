@@ -7,12 +7,18 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext js,html --fix"
+    "lint": "eslint . --ext js,jsx --fix"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.1"
+  },
   "devDependencies": {
-    "vite": "^5.4.10",
-    "vite-plugin-html": "^3.2.2"
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.10"
   },
   "keywords": [
     "voelkeep",

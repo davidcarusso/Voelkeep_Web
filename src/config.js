@@ -18,7 +18,7 @@ export const CONFIG = {
     phoneDisplay: '11 2338-7610',
     instagram: 'voelkeep',
     instagramUrl: 'https://www.instagram.com/voelkeep',
-    email: 'info@voelkeep.com', // Agregar si tienen
+    email: 'info@voelkeep.com',
   },
 
   // ============================================
@@ -69,7 +69,7 @@ export const CONFIG = {
       description: 'Peeling facial suave y seguro, apto para verano y pieles sensibles',
       priceFrom: 35000,
       duration: '60 min',
-      url: '/gloss-peel.html',
+      url: '/gloss-peel',
     },
     limpieza: {
       name: 'Limpieza Facial Profunda',
@@ -93,7 +93,7 @@ export const CONFIG = {
     tagline: 'Renovamos tu piel, renovamos tu bienestar',
     description: 'Centro de cosmetología profesional especializado en tratamientos faciales y corporales',
     year: new Date().getFullYear(),
-    version: '1.0.0',
+    version: '2.0.0',
   },
 
   // ============================================
@@ -101,8 +101,8 @@ export const CONFIG = {
   // ============================================
   urls: {
     home: '/',
-    glossPeel: '/gloss-peel.html',
-    giftCard: '/gift-card.html',
+    glossPeel: '/gloss-peel',
+    giftCard: '/gift-card',
   },
 
   // ============================================
