@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import BenefitCard from '@/components/BenefitCard';
 import CTASection from '@/components/CTASection';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { Icons, Icon } from '@/components/Icons';
 
 const LimpiezaProfunda = () => {
   useScrollReveal();
@@ -56,22 +57,22 @@ const LimpiezaProfunda = () => {
           <h2 className="section-title scroll-reveal">Beneficios de la Limpieza Profunda</h2>
           <div className="benefits-grid">
             <BenefitCard
-              icon="✨"
+              iconComponent={Icons.brillo}
               title="Piel más luminosa"
               description="Elimina células muertas revelando el brillo natural"
             />
             <BenefitCard
-              icon="🎯"
+              iconComponent={Icons.precision}
               title="Poros visiblemente reducidos"
               description="Limpieza profunda que minimiza la apariencia de poros"
             />
             <BenefitCard
-              icon="💧"
+              iconComponent={Icons.hidratacion}
               title="Mejor absorción"
               description="Tu piel absorberá mejor los productos de cuidado"
             />
             <BenefitCard
-              icon="🌿"
+              iconComponent={Icons.natural}
               title="Para todo tipo de piel"
               description="Especialmente ideal para piel grasa o con poros dilatados"
             />
@@ -101,7 +102,7 @@ const LimpiezaProfunda = () => {
         description="La limpieza profunda es el primer paso. Consultá por este tratamiento y comenzá a cuidar tu piel."
         buttonText="Agendar mi limpieza"
         whatsappKey="limpiezaProfunda"
-        note="📱 Respuesta inmediata • Solo con turno previo"
+        note={<><Icon icon={Icons.phone} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '6px' }} /> Respuesta inmediata • Solo con turno previo</>}
       />
     </div>
   );

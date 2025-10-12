@@ -1,8 +1,11 @@
 import { generateWhatsAppUrl, CONFIG } from '@/config';
+import { Icon, Icons } from '@/components/Icons';
 
-const ContactInfo = ({ icon, title, children, href, isExternal = false }) => (
+const ContactInfo = ({ icon, iconComponent, title, children, href, isExternal = false }) => (
   <div className="info-item">
-    <div className="info-icon">{icon}</div>
+    <div className="info-icon">
+      {iconComponent ? <Icon icon={iconComponent} size={24} /> : icon}
+    </div>
     <div>
       <h3>{title}</h3>
       {href ? (
@@ -30,12 +33,12 @@ const LocationSection = () => {
         <div className="location-content">
           <div className="location-info scroll-reveal">
             
-            <ContactInfo icon="📍" title="Dirección">
+            <ContactInfo iconComponent={Icons.location} title="Dirección">
               {CONFIG.location.addressFull}
             </ContactInfo>
             
             <ContactInfo 
-              icon="📱" 
+              iconComponent={Icons.phone}
               title="WhatsApp"
               href={generateWhatsAppUrl('general')}
               isExternal
@@ -44,7 +47,7 @@ const LocationSection = () => {
             </ContactInfo>
             
             <ContactInfo 
-              icon="📸" 
+              iconComponent={Icons.instagram}
               title="Instagram"
               href={CONFIG.contact.instagramUrl}
               isExternal
@@ -52,7 +55,7 @@ const LocationSection = () => {
               @{CONFIG.contact.instagram}
             </ContactInfo>
             
-            <ContactInfo icon="🕐" title="Horarios">
+            <ContactInfo iconComponent={Icons.clock} title="Horarios">
               {CONFIG.schedule.weekdays}<br />
               {CONFIG.schedule.saturday}<br />
               {CONFIG.schedule.sunday}

@@ -8,6 +8,8 @@
  * mensajes de WhatsApp y URLs importantes.
  */
 
+import { Icons } from '@/components/Icons';
+
 export const CONFIG = {
   // ============================================
   // INFORMACIÓN DE CONTACTO
@@ -147,21 +149,25 @@ export const CONFIG = {
   // ============================================
   features: [
     {
-      icon: '🔬',
+      iconComponent: Icons.magistral,
+      icon: '🔬', // Fallback para compatibilidad
       title: 'Productos Magistrales',
       description: 'Formulaciones farmacéuticas personalizadas de la más alta calidad',
     },
     {
+      iconComponent: Icons.atencion,
       icon: '👩‍⚕️',
       title: 'Atención Profesional',
       description: 'Equipo especializado en cosmetología con años de experiencia',
     },
     {
+      iconComponent: Icons.tratamiento,
       icon: '🌟',
       title: 'Tratamientos Personalizados',
       description: 'Cada sesión se adapta a las necesidades específicas de tu piel',
     },
     {
+      iconComponent: Icons.comprobados,
       icon: '🏆',
       title: 'Resultados Comprobados',
       description: 'Tratamientos efectivos con evidencia de mejoras visibles',

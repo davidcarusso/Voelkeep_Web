@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { generateWhatsAppUrl } from '@/config';
+import Icons, { Icon } from '@/components/Icons';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -134,7 +135,9 @@ const Navbar = () => {
               <div className={`dropdown-menu ${isDropdownOpen ? 'active' : ''}`}>
                 <div className="dropdown-content">
                   <div className="dropdown-section">
-                    <h4 className="dropdown-title">✨ Tratamientos Faciales</h4>
+                    <h4 className="dropdown-title">
+                      <Icon icon={Icons.sparkle} size={20} /> Tratamientos Faciales
+                    </h4>
                     {servicios.faciales.map((servicio, index) => (
                       <Link 
                         key={index}
@@ -148,7 +151,9 @@ const Navbar = () => {
                   </div>
                   
                   <div className="dropdown-section">
-                    <h4 className="dropdown-title">💆‍♀️ Tratamientos Corporales</h4>
+                    <h4 className="dropdown-title">
+                      <Icon icon={Icons.fuerza} size={20} /> Tratamientos Corporales
+                    </h4>
                     {servicios.corporales.map((servicio, index) => (
                       <Link 
                         key={index}
@@ -162,7 +167,9 @@ const Navbar = () => {
                   </div>
                   
                   <div className="dropdown-section">
-                    <h4 className="dropdown-title">📋 Asesoramiento</h4>
+                    <h4 className="dropdown-title">
+                      <Icon icon={Icons.asesoramiento} size={20} /> Asesoramiento
+                    </h4>
                     {servicios.asesoramiento.map((servicio, index) => (
                       <Link 
                         key={index}

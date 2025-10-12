@@ -1,5 +1,6 @@
 import { generateWhatsAppUrl } from '@/config';
 import { Link } from 'react-router-dom';
+import { Icon } from './Icons';
 
 const ServiceCard = ({ 
   icon, 
@@ -8,12 +9,19 @@ const ServiceCard = ({
   features, 
   linkTo, 
   linkText = 'Conocer más',
-  whatsappKey 
+  whatsappKey,
+  iconComponent 
 }) => {
   return (
     <div className="service-card scroll-reveal">
       <div className="service-image">
-        <div className="service-icon">{icon}</div>
+        <div className="service-icon">
+          {iconComponent ? (
+            <Icon icon={iconComponent} size={40} />
+          ) : (
+            icon
+          )}
+        </div>
       </div>
       <div className="service-content">
         <h3>{title}</h3>

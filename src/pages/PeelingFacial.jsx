@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import BenefitCard from '@/components/BenefitCard';
 import CTASection from '@/components/CTASection';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { Icons, Icon } from '@/components/Icons';
 
 const PeelingFacial = () => {
   useScrollReveal();
@@ -54,32 +55,32 @@ const PeelingFacial = () => {
           <h2 className="section-title scroll-reveal">Beneficios del Peeling Facial</h2>
           <div className="benefits-grid">
             <BenefitCard
-              icon="🌟"
+              iconComponent={Icons.sparkle}
               title="Reduce manchas"
               description="Aclara hiperpigmentaciones y unifica el tono"
             />
             <BenefitCard
-              icon="✨"
+              iconComponent={Icons.brillo}
               title="Atenúa líneas finas"
               description="Disminuye la apariencia de arrugas superficiales"
             />
             <BenefitCard
-              icon="🎯"
+              iconComponent={Icons.precision}
               title="Mejora la textura"
               description="Piel más lisa y suave al tacto"
             />
             <BenefitCard
-              icon="💎"
+              iconComponent={Icons.diamante}
               title="Minimiza poros"
               description="Poros menos visibles y más refinados"
             />
             <BenefitCard
-              icon="🔬"
+              iconComponent={Icons.ciencia}
               title="Trata marcas de acné"
               description="Reduce cicatrices y marcas post-acné"
             />
             <BenefitCard
-              icon="☀️"
+              iconComponent={Icons.verano}
               title="Luminosidad renovada"
               description="Brillo natural y piel revitalizada"
             />
@@ -114,7 +115,7 @@ const PeelingFacial = () => {
         description="Consultá por el tratamiento de peeling facial personalizado para vos"
         buttonText="Consultar tratamiento"
         whatsappKey="peelingFacial"
-        note="📱 Te asesoramos sobre el mejor tipo de peeling para tu piel"
+        note={<><Icon icon={Icons.phone} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '6px' }} /> Te asesoramos sobre el mejor tipo de peeling para tu piel</>}
       />
     </div>
   );

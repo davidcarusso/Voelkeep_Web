@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import BenefitCard from '@/components/BenefitCard';
 import CTASection from '@/components/CTASection';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { Icons, Icon } from '@/components/Icons';
 
 const Asesoramiento = () => {
   useScrollReveal();
@@ -92,32 +93,32 @@ const Asesoramiento = () => {
           <h2 className="section-title scroll-reveal">Beneficios del Asesoramiento</h2>
           <div className="benefits-grid">
             <BenefitCard
-              icon="🎯"
+              iconComponent={Icons.asesoramiento}
               title="Rutina a tu medida"
               description="Personalizada según tu tipo de piel y necesidades"
             />
             <BenefitCard
-              icon="💰"
+              iconComponent={Icons.dinero}
               title="Ahorrá dinero"
               description="Invertí solo en lo que tu piel realmente necesita"
             />
             <BenefitCard
-              icon="📚"
+              iconComponent={Icons.aprendizaje}
               title="Aprendé a cuidarte"
               description="Entendé tu piel y cómo tratarla correctamente"
             />
             <BenefitCard
-              icon="⏱️"
+              iconComponent={Icons.clock}
               title="Optimizá tu tiempo"
               description="Rutinas eficientes adaptadas a tu día a día"
             />
             <BenefitCard
-              icon="🔬"
+              iconComponent={Icons.magistral}
               title="Productos dermatológicos"
               description="Recomendaciones de productos magistrales de calidad"
             />
             <BenefitCard
-              icon="📈"
+              iconComponent={Icons.resultados}
               title="Resultados visibles"
               description="Mejorá tu piel con el cuidado adecuado"
             />
@@ -240,7 +241,7 @@ const Asesoramiento = () => {
         description="Agendá tu asesoramiento personalizado y comenzá a cuidar tu piel correctamente"
         buttonText="Solicitar asesoramiento"
         whatsappKey="asesoramiento"
-        note="📋 Consultá por disponibilidad y valor"
+        note={<><Icon icon={Icons.clipboard} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '6px' }} /> Consultá por disponibilidad y valor</>}
       />
     </div>
   );

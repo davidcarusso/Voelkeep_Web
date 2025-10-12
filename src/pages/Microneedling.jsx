@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import BenefitCard from '@/components/BenefitCard';
 import CTASection from '@/components/CTASection';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { Icons, Icon } from '@/components/Icons';
 
 const Microneedling = () => {
   useScrollReveal();
@@ -62,32 +63,32 @@ const Microneedling = () => {
           <h2 className="section-title scroll-reveal">Beneficios del Microneedling</h2>
           <div className="benefits-grid">
             <BenefitCard
-              icon="🔬"
+              iconComponent={Icons.ciencia}
               title="Reduce cicatrices"
               description="Especialmente efectivo en marcas de acné"
             />
             <BenefitCard
-              icon="✨"
+              iconComponent={Icons.brillo}
               title="Mejora la textura"
               description="Piel más lisa y uniforme"
             />
             <BenefitCard
-              icon="💪"
+              iconComponent={Icons.fuerza}
               title="Aumenta firmeza"
               description="Estimula colágeno y elastina natural"
             />
             <BenefitCard
-              icon="🎯"
+              iconComponent={Icons.precision}
               title="Minimiza poros"
               description="Poros visiblemente reducidos"
             />
             <BenefitCard
-              icon="📉"
+              iconComponent={Icons.reduccion}
               title="Atenúa líneas finas"
               description="Reduce arrugas y líneas de expresión"
             />
             <BenefitCard
-              icon="🌿"
+              iconComponent={Icons.natural}
               title="Resultados naturales"
               description="Regeneración progresiva y auténtica"
             />
@@ -123,7 +124,7 @@ const Microneedling = () => {
         description="Consultá por microneedling y descubrí cómo mejorar la calidad de tu piel desde adentro"
         buttonText="Consultar tratamiento"
         whatsappKey="microneedling"
-        note="🔬 Tecnología avanzada • Resultados naturales y duraderos"
+        note={<><Icon icon={Icons.ciencia} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '6px' }} /> Tecnología avanzada • Resultados naturales y duraderos</>}
       />
     </div>
   );

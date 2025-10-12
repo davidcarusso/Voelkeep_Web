@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import BenefitCard from '@/components/BenefitCard';
 import CTASection from '@/components/CTASection';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { Icons, Icon } from '@/components/Icons';
 
 const Anticeluliticos = () => {
   useScrollReveal();
@@ -58,32 +59,32 @@ const Anticeluliticos = () => {
           <h2 className="section-title scroll-reveal">Beneficios de los Tratamientos Anticelulíticos</h2>
           <div className="benefits-grid">
             <BenefitCard
-              icon="✨"
+              iconComponent={Icons.brillo}
               title="Reduce piel de naranja"
               description="Mejora visible de la textura cutánea"
             />
             <BenefitCard
-              icon="🌊"
+              iconComponent={Icons.anticeluliticos}
               title="Elimina líquidos"
               description="Disminuye la retención y la hinchazón"
             />
             <BenefitCard
-              icon="💪"
+              iconComponent={Icons.fuerza}
               title="Piel más firme"
               description="Textura lisa y tonificada"
             />
             <BenefitCard
-              icon="🔄"
+              iconComponent={Icons.refresh}
               title="Mejor circulación"
               description="Estimula el flujo sanguíneo y linfático"
             />
             <BenefitCard
-              icon="🎯"
+              iconComponent={Icons.precision}
               title="Resultados duraderos"
               description="Mejoras progresivas con tratamiento constante"
             />
             <BenefitCard
-              icon="✅"
+              iconComponent={Icons.check}
               title="Piel más uniforme"
               description="Suaviza irregularidades y nódulos"
             />
@@ -174,7 +175,7 @@ const Anticeluliticos = () => {
         description="Consultá por nuestros tratamientos anticelulíticos y empezá a ver resultados"
         buttonText="Consultar tratamiento"
         whatsappKey="anticeluliticos"
-        note="💆‍♀️ Combinamos técnicas para máxima eficacia"
+        note={<><Icon icon={Icons.precision} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '6px' }} /> Combinamos técnicas para máxima eficacia</>}
       />
     </div>
   );

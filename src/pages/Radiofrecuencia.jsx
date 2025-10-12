@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import BenefitCard from '@/components/BenefitCard';
 import CTASection from '@/components/CTASection';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { Icons, Icon } from '@/components/Icons';
 
 const Radiofrecuencia = () => {
   useScrollReveal();
@@ -58,32 +59,32 @@ const Radiofrecuencia = () => {
           <h2 className="section-title scroll-reveal">Beneficios de la Radiofrecuencia</h2>
           <div className="benefits-grid">
             <BenefitCard
-              icon="💪"
+              iconComponent={Icons.fuerza}
               title="Efecto tensor"
               description="Reafirma y tensa la piel visiblemente"
             />
             <BenefitCard
-              icon="🔬"
+              iconComponent={Icons.ciencia}
               title="Estimula colágeno"
               description="Produce colágeno nuevo de forma natural"
             />
             <BenefitCard
-              icon="✨"
+              iconComponent={Icons.brillo}
               title="Reduce flacidez"
               description="Combate la pérdida de firmeza facial"
             />
             <BenefitCard
-              icon="📐"
+              iconComponent={Icons.precision}
               title="Redefine el óvalo facial"
               description="Mejora el contorno y definición del rostro"
             />
             <BenefitCard
-              icon="⏱️"
+              iconComponent={Icons.clock}
               title="Resultados duraderos"
               description="Efectos progresivos y de larga duración"
             />
             <BenefitCard
-              icon="🏥"
+              iconComponent={Icons.calidad}
               title="Sin cirugía"
               description="Alternativa no invasiva al lifting quirúrgico"
             />
@@ -145,7 +146,7 @@ const Radiofrecuencia = () => {
         description="Consultá por radiofrecuencia y descubrí cómo reafirmar tu piel naturalmente"
         buttonText="Consultar tratamiento"
         whatsappKey="radiofrecuencia"
-        note="💆‍♀️ Tratamiento relajante • Resultados visibles desde la primera sesión"
+        note={<><Icon icon={Icons.relajacion} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '6px' }} /> Tratamiento relajante • Resultados visibles desde la primera sesión</>}
       />
     </div>
   );

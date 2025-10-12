@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import BenefitCard from '@/components/BenefitCard';
 import CTASection from '@/components/CTASection';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { Icons, Icon } from '@/components/Icons';
 
 const Dermaplaning = () => {
   useScrollReveal();
@@ -45,32 +46,32 @@ const Dermaplaning = () => {
           <h2 className="section-title scroll-reveal">Beneficios del Dermaplaning</h2>
           <div className="benefits-grid">
             <BenefitCard
-              icon="💎"
+              iconComponent={Icons.diamante}
               title="Piel ultra suave"
               description="Textura sedosa y acabado impecable"
             />
             <BenefitCard
-              icon="✨"
+              iconComponent={Icons.brillo}
               title="Luminosidad instantánea"
               description="Brillo natural desde la primera sesión"
             />
             <BenefitCard
-              icon="💄"
+              iconComponent={Icons.sparkle}
               title="Maquillaje perfecto"
               description="Base y productos se aplican como nunca antes"
             />
             <BenefitCard
-              icon="🧴"
+              iconComponent={Icons.empaque}
               title="Mejor absorción"
               description="Tus productos de skincare penetran más eficazmente"
             />
             <BenefitCard
-              icon="🎯"
+              iconComponent={Icons.precision}
               title="Sin dolor ni molestias"
               description="Procedimiento suave y relajante"
             />
             <BenefitCard
-              icon="⚡"
+              iconComponent={Icons.radiofrecuencia}
               title="Resultados inmediatos"
               description="Efecto visible al instante"
             />
@@ -107,7 +108,7 @@ const Dermaplaning = () => {
         description="Probá el dermaplaning y descubrí el efecto piel de porcelana"
         buttonText="Agendar dermaplaning"
         whatsappKey="dermaplaning"
-        note="✨ Ideal antes de eventos • Resultados inmediatos"
+        note={<><Icon icon={Icons.sparkle} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '6px' }} /> Ideal antes de eventos • Resultados inmediatos</>}
       />
     </div>
   );

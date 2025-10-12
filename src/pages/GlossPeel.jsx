@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import BenefitCard from '@/components/BenefitCard';
 import CTASection from '@/components/CTASection';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { Icons, Icon } from '@/components/Icons';
 
 const GlossPeel = () => {
   useScrollReveal();
@@ -25,22 +26,22 @@ const GlossPeel = () => {
           <h2 className="section-title scroll-reveal">Beneficios del Gloss Peel</h2>
           <div className="benefits-grid">
             <BenefitCard
-              icon="✨"
+              iconComponent={Icons.renovacion}
               title="Renovación celular"
               description="Estimula la regeneración natural de la piel"
             />
             <BenefitCard
-              icon="☀️"
+              iconComponent={Icons.verano}
               title="Apto para verano"
               description="Peeling suave que podés usar todo el año"
             />
             <BenefitCard
-              icon="💎"
+              iconComponent={Icons.brillo}
               title="Brillo natural"
               description="Recuperá la luminosidad de tu piel"
             />
             <BenefitCard
-              icon="🔬"
+              iconComponent={Icons.magistral}
               title="Productos magistrales"
               description="Formulaciones personalizadas de alta calidad"
             />
@@ -54,7 +55,12 @@ const GlossPeel = () => {
         description="Consultá por este tratamiento y descubrí la renovación que tu piel necesita"
         buttonText="Consultar por WhatsApp"
         whatsappKey="glossPeel"
-        note="📱 Respuesta inmediata"
+        note={
+          <>
+            <Icon icon={Icons.phone} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '6px' }} /> 
+            Respuesta inmediata
+          </>
+        }
       />
     </div>
   );

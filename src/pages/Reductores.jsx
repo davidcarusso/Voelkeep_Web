@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import BenefitCard from '@/components/BenefitCard';
 import CTASection from '@/components/CTASection';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { Icons, Icon } from '@/components/Icons';
 
 const Reductores = () => {
   useScrollReveal();
@@ -58,32 +59,32 @@ const Reductores = () => {
           <h2 className="section-title scroll-reveal">Beneficios de los Tratamientos Reductores</h2>
           <div className="benefits-grid">
             <BenefitCard
-              icon="📏"
+              iconComponent={Icons.reductores}
               title="Reduce medidas"
               description="Disminución visible del contorno corporal"
             />
             <BenefitCard
-              icon="🎯"
+              iconComponent={Icons.precision}
               title="Zonas específicas"
               description="Focalizamos el tratamiento donde lo necesitás"
             />
             <BenefitCard
-              icon="💧"
+              iconComponent={Icons.hidratacion}
               title="Elimina toxinas"
               description="Favorece la depuración del organismo"
             />
             <BenefitCard
-              icon="🔄"
+              iconComponent={Icons.refresh}
               title="Mejora la circulación"
               description="Estimula el flujo sanguíneo y linfático"
             />
             <BenefitCard
-              icon="✨"
+              iconComponent={Icons.brillo}
               title="Figura más definida"
               description="Silueta más estilizada y armoniosa"
             />
             <BenefitCard
-              icon="💪"
+              iconComponent={Icons.fuerza}
               title="Complementa tu esfuerzo"
               description="Potencia los resultados de dieta y ejercicio"
             />
@@ -142,7 +143,7 @@ const Reductores = () => {
         description="Consultá por nuestros tratamientos reductores personalizados"
         buttonText="Consultar tratamiento"
         whatsappKey="reductores"
-        note="💆‍♀️ Plan personalizado según tus objetivos"
+        note={<><Icon icon={Icons.personalizacion} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '6px' }} /> Plan personalizado según tus objetivos</>}
       />
     </div>
   );

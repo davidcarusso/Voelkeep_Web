@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import BenefitCard from '@/components/BenefitCard';
 import CTASection from '@/components/CTASection';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { Icons, Icon } from '@/components/Icons';
 
 const Hidralips = () => {
   useScrollReveal();
@@ -45,32 +46,32 @@ const Hidralips = () => {
           <h2 className="section-title scroll-reveal">Beneficios de Hidralips</h2>
           <div className="benefits-grid">
             <BenefitCard
-              icon="💧"
+              iconComponent={Icons.hidratacion}
               title="Hidratación profunda"
               description="Labios suaves y profundamente hidratados"
             />
             <BenefitCard
-              icon="✨"
+              iconComponent={Icons.brillo}
               title="Efecto gloss natural"
               description="Brillo saludable sin productos pegajosos"
             />
             <BenefitCard
-              icon="🌸"
+              iconComponent={Icons.flor}
               title="Mejora el color"
               description="Devuelve el tono rosado natural a los labios"
             />
             <BenefitCard
-              icon="💋"
+              iconComponent={Icons.heart}
               title="Volumen sutil"
               description="Realza el volumen natural sin exageraciones"
             />
             <BenefitCard
-              icon="🔧"
+              iconComponent={Icons.herramienta}
               title="Repara grietas"
               description="Ideal para labios resecos o agrietados"
             />
             <BenefitCard
-              icon="⚡"
+              iconComponent={Icons.radiofrecuencia}
               title="Resultados inmediatos"
               description="Sentí y ví la diferencia desde la primera sesión"
             />
@@ -137,7 +138,7 @@ const Hidralips = () => {
         description="Probá Hidralips y descubrí la diferencia de unos labios bien cuidados"
         buttonText="Consultar por Hidralips"
         whatsappKey="hidralips"
-        note="💋 Sin dolor • Resultados naturales e inmediatos"
+        note={<><Icon icon={Icons.labios} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '6px' }} /> Sin dolor • Resultados naturales e inmediatos</>}
       />
     </div>
   );

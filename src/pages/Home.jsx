@@ -7,6 +7,7 @@ import LocationSection from '@/components/LocationSection';
 import CTASection from '@/components/CTASection';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { useGoogleMapsLoader } from '@/hooks/useGoogleMapsLoader';
+import Icons, { Icon } from '@/components/Icons';
 
 const Home = () => {
   useScrollReveal();
@@ -51,11 +52,13 @@ const Home = () => {
           <h2 className="section-title scroll-reveal">Nuestros tratamientos destacados</h2>
           
           {/* Tratamientos Faciales */}
-          <h3 className="subsection-title scroll-reveal">✨ Tratamientos Faciales</h3>
+          <h3 className="subsection-title scroll-reveal">
+            <Icon icon={Icons.sparkle} size={28} /> Tratamientos Faciales
+          </h3>
           <div className="services-grid">
             
             <ServiceCard
-              icon="✨"
+              iconComponent={Icons.glossPeel}
               title="Gloss Peel"
               description="Peeling facial suave y seguro, apto para verano y pieles sensibles. Recuperá el brillo natural de tu piel."
               features={[
@@ -68,7 +71,7 @@ const Home = () => {
             />
 
             <ServiceCard
-              icon="💎"
+              iconComponent={Icons.limpieza}
               title="Limpieza Facial Profunda"
               description="El primer paso para una piel sana y luminosa. Elimina impurezas y células muertas."
               features={[
@@ -81,7 +84,7 @@ const Home = () => {
             />
 
             <ServiceCard
-              icon="🌟"
+              iconComponent={Icons.peeling}
               title="Peeling Facial"
               description="Renovación celular para mejorar textura, luminosidad y uniformidad de la piel."
               features={[
@@ -94,7 +97,7 @@ const Home = () => {
             />
 
             <ServiceCard
-              icon="💫"
+              iconComponent={Icons.dermaplaning}
               title="Dermaplaning"
               description="Piel de porcelana al instante. Elimina vello fino y células muertas sin dolor."
               features={[
@@ -107,7 +110,7 @@ const Home = () => {
             />
 
             <ServiceCard
-              icon="🔬"
+              iconComponent={Icons.microneedling}
               title="Microneedling"
               description="Estimula colágeno y elastina naturalmente. Reduce cicatrices y mejora la textura."
               features={[
@@ -120,7 +123,7 @@ const Home = () => {
             />
 
             <ServiceCard
-              icon="⚡"
+              iconComponent={Icons.radiofrecuencia}
               title="Radiofrecuencia Multipolar"
               description="Reafirma y rejuvenece sin cirugía. Estimula colágeno en capas profundas."
               features={[
@@ -133,7 +136,7 @@ const Home = () => {
             />
 
             <ServiceCard
-              icon="💋"
+              iconComponent={Icons.hidralips}
               title="Hidralips"
               description="Hidratación intensiva para labios suaves con brillo natural, sin inyecciones."
               features={[
@@ -148,11 +151,13 @@ const Home = () => {
           </div>
 
           {/* Tratamientos Corporales */}
-          <h3 className="subsection-title scroll-reveal" style={{ marginTop: '4rem' }}>💆‍♀️ Tratamientos Corporales</h3>
+          <h3 className="subsection-title scroll-reveal" style={{ marginTop: '4rem' }}>
+            <Icon icon={Icons.fuerza} size={28} /> Tratamientos Corporales
+          </h3>
           <div className="services-grid">
             
             <ServiceCard
-              icon="📏"
+              iconComponent={Icons.reductores}
               title="Tratamientos Reductores"
               description="Modela tu figura y reduce volumen en zonas específicas del cuerpo."
               features={[
@@ -165,7 +170,7 @@ const Home = () => {
             />
 
             <ServiceCard
-              icon="💪"
+              iconComponent={Icons.reafirmantes}
               title="Tratamientos Reafirmantes"
               description="Recupera la firmeza y elasticidad de tu piel corporal."
               features={[
@@ -178,7 +183,7 @@ const Home = () => {
             />
 
             <ServiceCard
-              icon="🌊"
+              iconComponent={Icons.anticeluliticos}
               title="Tratamientos Anticelulíticos"
               description="Reduce la celulitis y mejora la textura de la piel corporal."
               features={[
@@ -193,11 +198,13 @@ const Home = () => {
           </div>
 
           {/* Asesoramiento */}
-          <h3 className="subsection-title scroll-reveal" style={{ marginTop: '4rem' }}>📋 Asesoramiento Personalizado</h3>
+          <h3 className="subsection-title scroll-reveal" style={{ marginTop: '4rem' }}>
+            <Icon icon={Icons.asesoramiento} size={28} /> Asesoramiento Personalizado
+          </h3>
           <div className="services-grid">
             
             <ServiceCard
-              icon="🎯"
+              iconComponent={Icons.asesoramiento}
               title="Asesoramiento de Skincare"
               description="Diagnóstico profesional y diseño de rutina personalizada para tu piel."
               features={[
@@ -218,13 +225,17 @@ const Home = () => {
         <div className="container">
           <div className="banner-content scroll-reveal">
             <div className="banner-text">
-              <span className="banner-badge">🎁 Nuevo</span>
+              <span className="banner-badge">
+                <Icon icon={Icons.gift} size={20} /> Nuevo
+              </span>
               <h2>Regalá Bienestar</h2>
               <p>Gift Cards personalizadas para que regales una experiencia única de cuidado y renovación</p>
               <Link to="/gift-card" className="cta-button cta-gift">Ver Gift Cards</Link>
             </div>
             <div className="banner-icon">
-              <div className="gift-box">🎁</div>
+              <div className="gift-box">
+                <Icon icon={Icons.gift} size={64} />
+              </div>
             </div>
           </div>
         </div>
@@ -238,6 +249,7 @@ const Home = () => {
             {CONFIG.features.map((feature, index) => (
               <FeatureCard
                 key={index}
+                iconComponent={feature.iconComponent}
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
@@ -259,7 +271,11 @@ const Home = () => {
         description="Agendá tu consulta y descubrí el tratamiento perfecto para vos"
         buttonText="Agendar turno ahora"
         whatsappKey="agendar"
-        note="📱 Respuesta inmediata por WhatsApp"
+        note={
+          <>
+            <Icon icon={Icons.phone} size={18} /> Respuesta inmediata por WhatsApp
+          </>
+        }
       />
     </div>
   );

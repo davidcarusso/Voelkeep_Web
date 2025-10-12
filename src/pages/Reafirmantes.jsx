@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import BenefitCard from '@/components/BenefitCard';
 import CTASection from '@/components/CTASection';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { Icons, Icon } from '@/components/Icons';
 
 const Reafirmantes = () => {
   useScrollReveal();
@@ -58,32 +59,32 @@ const Reafirmantes = () => {
           <h2 className="section-title scroll-reveal">Beneficios de los Tratamientos Reafirmantes</h2>
           <div className="benefits-grid">
             <BenefitCard
-              icon="💪"
+              iconComponent={Icons.fuerza}
               title="Combate la flacidez"
               description="Piel más firme y tonificada"
             />
             <BenefitCard
-              icon="✨"
+              iconComponent={Icons.brillo}
               title="Mejora la elasticidad"
               description="Piel más flexible y resistente"
             />
             <BenefitCard
-              icon="🔬"
+              iconComponent={Icons.ciencia}
               title="Estimula colágeno"
               description="Producción natural de fibras de sostén"
             />
             <BenefitCard
-              icon="📐"
+              iconComponent={Icons.precision}
               title="Remodela contornos"
               description="Define y estiliza la silueta"
             />
             <BenefitCard
-              icon="🌟"
+              iconComponent={Icons.sparkle}
               title="Textura mejorada"
               description="Piel más lisa y uniforme"
             />
             <BenefitCard
-              icon="⏱️"
+              iconComponent={Icons.clock}
               title="Resultados progresivos"
               description="Mejoras visibles sesión tras sesión"
             />
@@ -169,7 +170,7 @@ const Reafirmantes = () => {
         description="Consultá por nuestros tratamientos reafirmantes personalizados"
         buttonText="Consultar tratamiento"
         whatsappKey="reafirmantes"
-        note="💪 Sesiones adaptadas a tus necesidades específicas"
+        note={<><Icon icon={Icons.fuerza} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '6px' }} /> Sesiones adaptadas a tus necesidades específicas</>}
       />
     </div>
   );
