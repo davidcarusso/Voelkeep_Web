@@ -133,7 +133,7 @@ const Asesoramiento = () => {
             <h2>¿Qué incluye el asesoramiento?</h2>
             <div className="includes-grid">
               <div className="include-item">
-                <span className="check">✓</span>
+                <span className="check"><Icon icon={Icons.check} size={24} /></span>
                 <div>
                   <h3>Diagnóstico facial completo</h3>
                   <p>Análisis profesional de tu tipo de piel</p>
@@ -141,7 +141,7 @@ const Asesoramiento = () => {
               </div>
               
               <div className="include-item">
-                <span className="check">✓</span>
+                <span className="check"><Icon icon={Icons.check} size={24} /></span>
                 <div>
                   <h3>Rutina mañana y noche</h3>
                   <p>Paso a paso de tu cuidado diario</p>
@@ -149,7 +149,7 @@ const Asesoramiento = () => {
               </div>
               
               <div className="include-item">
-                <span className="check">✓</span>
+                <span className="check"><Icon icon={Icons.check} size={24} /></span>
                 <div>
                   <h3>Lista de productos recomendados</h3>
                   <p>Con marcas, activos y dónde conseguirlos</p>
@@ -157,7 +157,7 @@ const Asesoramiento = () => {
               </div>
               
               <div className="include-item">
-                <span className="check">✓</span>
+                <span className="check"><Icon icon={Icons.check} size={24} /></span>
                 <div>
                   <h3>Guía de aplicación</h3>
                   <p>Cómo y cuándo usar cada producto</p>
@@ -165,7 +165,7 @@ const Asesoramiento = () => {
               </div>
               
               <div className="include-item">
-                <span className="check">✓</span>
+                <span className="check"><Icon icon={Icons.check} size={24} /></span>
                 <div>
                   <h3>Seguimiento personalizado</h3>
                   <p>Ajustes según la evolución de tu piel</p>
@@ -173,7 +173,7 @@ const Asesoramiento = () => {
               </div>
               
               <div className="include-item">
-                <span className="check">✓</span>
+                <span className="check"><Icon icon={Icons.check} size={24} /></span>
                 <div>
                   <h3>Asesoramiento continuo</h3>
                   <p>Consultas por WhatsApp ante dudas</p>
@@ -190,14 +190,14 @@ const Asesoramiento = () => {
           <div className="ideal-content scroll-reveal">
             <h2>Perfecto para vos si:</h2>
             <ul className="ideal-list">
-              <li>✓ No sabés qué productos usar para tu piel</li>
-              <li>✓ Probaste mil cosas y nada funciona</li>
-              <li>✓ Querés empezar una rutina de skincare desde cero</li>
-              <li>✓ Gastaste mucho dinero en productos que no necesitás</li>
-              <li>✓ Tu piel cambió y no sabés cómo adaptarte</li>
-              <li>✓ Buscás optimizar tu rutina actual</li>
-              <li>✓ Querés resultados reales con productos de calidad</li>
-              <li>✓ Necesitás asesoramiento profesional personalizado</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> No sabés qué productos usar para tu piel</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Probaste mil cosas y nada funciona</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Querés empezar una rutina de skincare desde cero</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Gastaste mucho dinero en productos que no necesitás</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Tu piel cambió y no sabés cómo adaptarte</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Buscás optimizar tu rutina actual</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Querés resultados reales con productos de calidad</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Necesitás asesoramiento profesional personalizado</li>
             </ul>
           </div>
         </div>
@@ -210,7 +210,7 @@ const Asesoramiento = () => {
             <h2>La diferencia de un asesoramiento profesional</h2>
             <div className="comparison-grid">
               <div className="comparison-card without">
-                <h3>❌ Sin asesoramiento</h3>
+                <h3><Icon icon={Icons.close} size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Sin asesoramiento</h3>
                 <ul>
                   <li>Productos genéricos que no funcionan</li>
                   <li>Gastás en cosas que no necesitás</li>
@@ -221,7 +221,7 @@ const Asesoramiento = () => {
               </div>
               
               <div className="comparison-card with">
-                <h3>✅ Con asesoramiento Voelkeep</h3>
+                <h3><Icon icon={Icons.check} size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Con asesoramiento Voelkeep</h3>
                 <ul>
                   <li>Rutina específica para tu piel</li>
                   <li>Invertís inteligentemente</li>

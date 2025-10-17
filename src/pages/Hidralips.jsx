@@ -33,7 +33,7 @@ const Hidralips = () => {
             </p>
             
             <div className="highlight-box">
-              <h3>💄 Sin agujas, sin dolor</h3>
+              <h3><Icon icon={Icons.labios} size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Sin agujas, sin dolor</h3>
               <p>Conseguí labios más bonitos sin inyecciones. El resultado es natural, suave y con un efecto "gloss" inmediato.</p>
             </div>
           </div>
@@ -116,16 +116,16 @@ const Hidralips = () => {
           <div className="ideal-content scroll-reveal">
             <h2>Perfecto para vos si:</h2>
             <ul className="ideal-list">
-              <li>✓ Tenés labios secos o agrietados</li>
-              <li>✓ Querés mejorar la textura de tus labios</li>
-              <li>✓ Buscás un efecto natural sin inyecciones</li>
-              <li>✓ Tus labios perdieron color o vitalidad</li>
-              <li>✓ Querés un boost antes de un evento especial</li>
-              <li>✓ Necesitás cuidado extra en temporada de frío</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Tenés labios secos o agrietados</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Querés mejorar la textura de tus labios</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Buscás un efecto natural sin inyecciones</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Tus labios perdieron color o vitalidad</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Querés un boost antes de un evento especial</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Necesitás cuidado extra en temporada de frío</li>
             </ul>
             
             <div className="tip-box">
-              <h3>💡 Tip profesional</h3>
+              <h3><Icon icon={Icons.sparkle} size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Tip profesional</h3>
               <p>Combina Hidralips con tu rutina de skincare facial para un look completo y armonioso.</p>
             </div>
           </div>

@@ -34,17 +34,17 @@ const Anticeluliticos = () => {
             
             <div className="treatment-approach">
               <div className="approach-card">
-                <span className="icon">🔄</span>
+                <span className="icon"><Icon icon={Icons.renovacion} size={32} /></span>
                 <h3>Mejora la circulación</h3>
                 <p>Activa el flujo sanguíneo y linfático</p>
               </div>
               <div className="approach-card">
-                <span className="icon">💧</span>
+                <span className="icon"><Icon icon={Icons.waves} size={32} /></span>
                 <h3>Drenaje linfático</h3>
                 <p>Elimina toxinas y líquidos retenidos</p>
               </div>
               <div className="approach-card">
-                <span className="icon">🌬️</span>
+                <span className="icon"><Icon icon={Icons.radiofrecuencia} size={32} /></span>
                 <h3>Oxigenación</h3>
                 <p>Mejora la nutrición de los tejidos</p>
               </div>
@@ -74,7 +74,7 @@ const Anticeluliticos = () => {
               description="Textura lisa y tonificada"
             />
             <BenefitCard
-              iconComponent={Icons.refresh}
+              iconComponent={Icons.renovacion}
               title="Mejor circulación"
               description="Estimula el flujo sanguíneo y linfático"
             />
@@ -132,12 +132,12 @@ const Anticeluliticos = () => {
           <div className="zones-content scroll-reveal">
             <h2>Zonas de aplicación más comunes</h2>
             <div className="zones-grid">
-              <div className="zone-item">✓ Glúteos</div>
-              <div className="zone-item">✓ Muslos</div>
-              <div className="zone-item">✓ Caderas</div>
-              <div className="zone-item">✓ Abdomen</div>
-              <div className="zone-item">✓ Brazos</div>
-              <div className="zone-item">✓ Piernas</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Glúteos</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Muslos</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Caderas</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Abdomen</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Brazos</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Piernas</div>
             </div>
           </div>
         </div>
@@ -149,16 +149,16 @@ const Anticeluliticos = () => {
           <div className="ideal-content scroll-reveal">
             <h2>Ideal para vos si:</h2>
             <ul className="ideal-list">
-              <li>✓ Tenés celulitis visible en glúteos, muslos o piernas</li>
-              <li>✓ Querés mejorar la textura de tu piel</li>
-              <li>✓ Sufrís de retención de líquidos</li>
-              <li>✓ Tenés mala circulación</li>
-              <li>✓ Buscás complementar tu rutina de ejercicio</li>
-              <li>✓ Querés prevenir el avance de la celulitis</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Tenés celulitis visible en glúteos, muslos o piernas</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Querés mejorar la textura de tu piel</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Sufrís de retención de líquidos</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Tenés mala circulación</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Buscás complementar tu rutina de ejercicio</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Querés prevenir el avance de la celulitis</li>
             </ul>
             
             <div className="important-note">
-              <h3>🥗 Recomendación integral</h3>
+              <h3><Icon icon={Icons.heartPulse} size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Recomendación integral</h3>
               <p>
                 Los tratamientos anticelulíticos son más efectivos cuando se combinan con 
                 actividad física regular, hidratación abundante y una alimentación equilibrada 

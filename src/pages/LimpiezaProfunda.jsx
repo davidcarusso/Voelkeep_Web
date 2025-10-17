@@ -86,11 +86,11 @@ const LimpiezaProfunda = () => {
           <div className="ideal-content scroll-reveal">
             <h2>Ideal para vos si tenés:</h2>
             <ul className="ideal-list">
-              <li>✓ Piel con tendencia grasa</li>
-              <li>✓ Puntos negros y comedones</li>
-              <li>✓ Poros dilatados</li>
-              <li>✓ Piel opaca o sin luminosidad</li>
-              <li>✓ Ganas de comenzar una rutina de skincare</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Piel con tendencia grasa</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Puntos negros y comedones</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Poros dilatados</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Piel opaca o sin luminosidad</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Ganas de comenzar una rutina de skincare</li>
             </ul>
           </div>
         </div>

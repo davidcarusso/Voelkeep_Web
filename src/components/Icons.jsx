@@ -88,6 +88,7 @@ export const Icons = {
   reductores: Ruler,
   reafirmantes: Activity,
   anticeluliticos: Waves,
+  waves: Waves,
   
   // Asesoramiento
   asesoramiento: Target,

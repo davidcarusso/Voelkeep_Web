@@ -34,17 +34,17 @@ const Reafirmantes = () => {
             
             <div className="methods-grid">
               <div className="method-card">
-                <span className="icon">⚡</span>
+                <span className="icon"><Icon icon={Icons.radiofrecuencia} size={32} /></span>
                 <h3>Radiofrecuencia</h3>
                 <p>Estimula colágeno mediante calor controlado</p>
               </div>
               <div className="method-card">
-                <span className="icon">💆‍♀️</span>
+                <span className="icon"><Icon icon={Icons.relajacion} size={32} /></span>
                 <h3>Masajes especializados</h3>
                 <p>Técnicas que tonifican y reactivan los tejidos</p>
               </div>
               <div className="method-card">
-                <span className="icon">🧴</span>
+                <span className="icon"><Icon icon={Icons.formula} size={32} /></span>
                 <h3>Productos tensores</h3>
                 <p>Activos reafirmantes de alta eficacia</p>
               </div>
@@ -98,14 +98,14 @@ const Reafirmantes = () => {
           <div className="zones-content scroll-reveal">
             <h2>Zonas de aplicación</h2>
             <div className="zones-grid">
-              <div className="zone-item">✓ Abdomen</div>
-              <div className="zone-item">✓ Brazos</div>
-              <div className="zone-item">✓ Glúteos</div>
-              <div className="zone-item">✓ Muslos</div>
-              <div className="zone-item">✓ Piernas</div>
-              <div className="zone-item">✓ Cara interna de brazos</div>
-              <div className="zone-item">✓ Cara interna de muslos</div>
-              <div className="zone-item">✓ Zona del busto</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Abdomen</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Brazos</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Glúteos</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Muslos</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Piernas</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Cara interna de brazos</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Cara interna de muslos</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Zona del busto</div>
             </div>
           </div>
         </div>
@@ -118,19 +118,19 @@ const Reafirmantes = () => {
             <h2>¿Cuándo son ideales estos tratamientos?</h2>
             <div className="situations-grid">
               <div className="situation-card">
-                <h3>🤰 Post-embarazo</h3>
+                <h3><Icon icon={Icons.user} size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Post-embarazo</h3>
                 <p>Recuperá la firmeza después de la maternidad</p>
               </div>
               <div className="situation-card">
-                <h3>📉 Después de adelgazar</h3>
+                <h3><Icon icon={Icons.fuerza} size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Después de adelgazar</h3>
                 <p>Tonificá la piel tras una pérdida de peso</p>
               </div>
               <div className="situation-card">
-                <h3>⏳ Envejecimiento natural</h3>
+                <h3><Icon icon={Icons.clock} size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Envejecimiento natural</h3>
                 <p>Combatí la flacidez por el paso del tiempo</p>
               </div>
               <div className="situation-card">
-                <h3>💪 Potencia tu entrenamiento</h3>
+                <h3><Icon icon={Icons.fuerza} size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Potencia tu entrenamiento</h3>
                 <p>Complementá tu rutina de ejercicios</p>
               </div>
             </div>
@@ -144,17 +144,17 @@ const Reafirmantes = () => {
           <div className="ideal-content scroll-reveal">
             <h2>Ideal para vos si:</h2>
             <ul className="ideal-list">
-              <li>✓ Tenés flacidez en abdomen, brazos, glúteos o piernas</li>
-              <li>✓ Perdiste elasticidad en la piel</li>
-              <li>✓ Querés prevenir o tratar la flacidez</li>
-              <li>✓ Bajaste de peso y necesitás tensar la piel</li>
-              <li>✓ Pasaste por un embarazo</li>
-              <li>✓ Buscás complementar tu rutina fitness</li>
-              <li>✓ Querés mejorar la apariencia general de tu piel corporal</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Tenés flacidez en abdomen, brazos, glúteos o piernas</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Perdiste elasticidad en la piel</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Querés prevenir o tratar la flacidez</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Bajaste de peso y necesitás tensar la piel</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Pasaste por un embarazo</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Buscás complementar tu rutina fitness</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Querés mejorar la apariencia general de tu piel corporal</li>
             </ul>
             
             <div className="tip-box">
-              <h3>💡 Recomendación profesional</h3>
+              <h3><Icon icon={Icons.sparkle} size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Recomendación profesional</h3>
               <p>
                 Para mejores resultados, estos tratamientos se pueden combinar con 
                 ejercicios de tonificación muscular y una alimentación rica en proteínas.

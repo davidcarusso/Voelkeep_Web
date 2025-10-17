@@ -34,17 +34,17 @@ const Radiofrecuencia = () => {
             
             <div className="tech-features">
               <div className="tech-card">
-                <span className="tech-icon">🌡️</span>
+                <span className="tech-icon"><Icon icon={Icons.radiofrecuencia} size={32} /></span>
                 <h3>Calor controlado</h3>
                 <p>Temperatura precisa para máxima eficacia y confort</p>
               </div>
               <div className="tech-card">
-                <span className="tech-icon">🎯</span>
+                <span className="tech-icon"><Icon icon={Icons.target} size={32} /></span>
                 <h3>Penetración profunda</h3>
                 <p>Actúa en las capas dérmicas donde se produce el colágeno</p>
               </div>
               <div className="tech-card">
-                <span className="tech-icon">✨</span>
+                <span className="tech-icon"><Icon icon={Icons.sparkle} size={32} /></span>
                 <h3>Sin dolor</h3>
                 <p>Sensación agradable de calor suave y relajante</p>
               </div>
@@ -99,19 +99,19 @@ const Radiofrecuencia = () => {
             <h2>Áreas de aplicación</h2>
             <div className="areas-grid">
               <div className="area-card">
-                <h3>👤 Rostro completo</h3>
+                <h3><Icon icon={Icons.user} size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Rostro completo</h3>
                 <p>Mejilla, mentón, frente y contorno facial</p>
               </div>
               <div className="area-card">
-                <h3>🦢 Cuello y papada</h3>
+                <h3><Icon icon={Icons.fuerza} size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Cuello y papada</h3>
                 <p>Reafirma y reduce la flacidez en esta zona delicada</p>
               </div>
               <div className="area-card">
-                <h3>👁️ Contorno de ojos</h3>
+                <h3><Icon icon={Icons.sparkle} size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Contorno de ojos</h3>
                 <p>Atenúa líneas finas y reafirma párpados</p>
               </div>
               <div className="area-card">
-                <h3>💋 Código de barras</h3>
+                <h3><Icon icon={Icons.labios} size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Código de barras</h3>
                 <p>Suaviza las líneas alrededor de los labios</p>
               </div>
             </div>
@@ -125,12 +125,12 @@ const Radiofrecuencia = () => {
           <div className="ideal-content scroll-reveal">
             <h2>Ideal para vos si tenés:</h2>
             <ul className="ideal-list">
-              <li>✓ Flacidez facial leve a moderada</li>
-              <li>✓ Pérdida de definición en el óvalo facial</li>
-              <li>✓ Arrugas y líneas de expresión</li>
-              <li>✓ Papada o cuello con falta de firmeza</li>
-              <li>✓ Ganas de rejuvenecer sin cirugía</li>
-              <li>✓ Deseo de prevenir el envejecimiento</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Flacidez facial leve a moderada</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Pérdida de definición en el óvalo facial</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Arrugas y líneas de expresión</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Papada o cuello con falta de firmeza</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Ganas de rejuvenecer sin cirugía</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Deseo de prevenir el envejecimiento</li>
             </ul>
             <p className="note">
               <strong>Protocolo recomendado:</strong> Se sugiere un plan de sesiones semanales 

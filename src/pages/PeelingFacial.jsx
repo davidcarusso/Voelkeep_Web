@@ -94,12 +94,12 @@ const PeelingFacial = () => {
           <div className="ideal-content scroll-reveal">
             <h2>Ideal para vos si tenés:</h2>
             <ul className="ideal-list">
-              <li>✓ Manchas en la piel o hiperpigmentación</li>
-              <li>✓ Líneas finas o arrugas superficiales</li>
-              <li>✓ Poros dilatados</li>
-              <li>✓ Marcas o cicatrices de acné</li>
-              <li>✓ Piel opaca o sin vitalidad</li>
-              <li>✓ Textura irregular</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Manchas en la piel o hiperpigmentación</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Líneas finas o arrugas superficiales</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Poros dilatados</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Marcas o cicatrices de acné</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Piel opaca o sin vitalidad</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Textura irregular</li>
             </ul>
             <p className="note">
               <strong>Nota importante:</strong> El tipo de peeling será determinado en consulta 

@@ -33,24 +33,24 @@ const Microneedling = () => {
             
             <div className="process-steps">
               <div className="process-step">
-                <span className="step-icon">🎯</span>
+                <span className="step-icon"><Icon icon={Icons.target} size={32} /></span>
                 <h3>Estimulación controlada</h3>
                 <p>Las microagujas crean micropunciones precisas</p>
               </div>
               <div className="process-step">
-                <span className="step-icon">⚡</span>
+                <span className="step-icon"><Icon icon={Icons.radiofrecuencia} size={32} /></span>
                 <h3>Activación celular</h3>
                 <p>El cuerpo responde regenerando tejido nuevo</p>
               </div>
               <div className="process-step">
-                <span className="step-icon">✨</span>
+                <span className="step-icon"><Icon icon={Icons.sparkle} size={32} /></span>
                 <h3>Resultados progresivos</h3>
                 <p>La piel se renueva naturalmente en las siguientes semanas</p>
               </div>
             </div>
             
             <div className="highlight-box">
-              <h3>💉 Potenciación de activos</h3>
+              <h3><Icon icon={Icons.ciencia} size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Potenciación de activos</h3>
               <p>Podemos combinar el tratamiento con vitaminas, ácido hialurónico o péptidos para resultados superiores.</p>
             </div>
           </div>
@@ -102,13 +102,13 @@ const Microneedling = () => {
           <div className="ideal-content scroll-reveal">
             <h2>Ideal para vos si tenés:</h2>
             <ul className="ideal-list">
-              <li>✓ Cicatrices de acné o marcas en la piel</li>
-              <li>✓ Poros dilatados</li>
-              <li>✓ Líneas finas o arrugas</li>
-              <li>✓ Pérdida de firmeza</li>
-              <li>✓ Textura irregular</li>
-              <li>✓ Estrías (también funciona en cuerpo)</li>
-              <li>✓ Ganas de mejorar la calidad general de tu piel</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Cicatrices de acné o marcas en la piel</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Poros dilatados</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Líneas finas o arrugas</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Pérdida de firmeza</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Textura irregular</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Estrías (también funciona en cuerpo)</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Ganas de mejorar la calidad general de tu piel</li>
             </ul>
             <p className="note">
               <strong>Nota:</strong> Los resultados son progresivos. Se recomienda un protocolo 

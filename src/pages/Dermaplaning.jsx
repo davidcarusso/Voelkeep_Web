@@ -33,7 +33,7 @@ const Dermaplaning = () => {
             </p>
             
             <div className="highlight-box">
-              <h3>✨ Sin tiempo de recuperación</h3>
+              <h3><Icon icon={Icons.sparkle} size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Sin tiempo de recuperación</h3>
               <p>Podés retomar tu rutina normal inmediatamente después del tratamiento.</p>
             </div>
           </div>
@@ -91,12 +91,12 @@ const Dermaplaning = () => {
             
             <h3>Ideal para vos si buscás:</h3>
             <ul className="ideal-list">
-              <li>✓ Piel súper suave y luminosa al instante</li>
-              <li>✓ Mejorar la aplicación del maquillaje</li>
-              <li>✓ Preparar la piel para otros tratamientos</li>
-              <li>✓ Eliminar el vello facial fino</li>
-              <li>✓ Exfoliación profunda sin químicos</li>
-              <li>✓ Tratamiento seguro y sin dolor</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Piel súper suave y luminosa al instante</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Mejorar la aplicación del maquillaje</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Preparar la piel para otros tratamientos</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Eliminar el vello facial fino</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Exfoliación profunda sin químicos</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Tratamiento seguro y sin dolor</li>
             </ul>
           </div>
         </div>

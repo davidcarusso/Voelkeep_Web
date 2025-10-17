@@ -34,17 +34,17 @@ const Reductores = () => {
             
             <div className="techniques-grid">
               <div className="technique-card">
-                <span className="icon">💆‍♀️</span>
+                <span className="icon"><Icon icon={Icons.relajacion} size={32} /></span>
                 <h3>Masajes manuales</h3>
                 <p>Técnicas de drenaje y modelado corporal</p>
               </div>
               <div className="technique-card">
-                <span className="icon">⚡</span>
+                <span className="icon"><Icon icon={Icons.radiofrecuencia} size={32} /></span>
                 <h3>Aparatología</h3>
                 <p>Tecnología que potencia los resultados</p>
               </div>
               <div className="technique-card">
-                <span className="icon">🧴</span>
+                <span className="icon"><Icon icon={Icons.formula} size={32} /></span>
                 <h3>Productos lipolíticos</h3>
                 <p>Activos de alta concentración para quemar grasa</p>
               </div>
@@ -98,14 +98,14 @@ const Reductores = () => {
           <div className="zones-content scroll-reveal">
             <h2>Zonas de aplicación</h2>
             <div className="zones-grid">
-              <div className="zone-item">✓ Abdomen</div>
-              <div className="zone-item">✓ Cintura</div>
-              <div className="zone-item">✓ Caderas</div>
-              <div className="zone-item">✓ Cartucheras</div>
-              <div className="zone-item">✓ Muslos</div>
-              <div className="zone-item">✓ Brazos</div>
-              <div className="zone-item">✓ Espalda</div>
-              <div className="zone-item">✓ Piernas</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Abdomen</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Cintura</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Caderas</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Cartucheras</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Muslos</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Brazos</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Espalda</div>
+              <div className="zone-item"><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Piernas</div>
             </div>
           </div>
         </div>
@@ -117,16 +117,16 @@ const Reductores = () => {
           <div className="ideal-content scroll-reveal">
             <h2>Ideal para vos si:</h2>
             <ul className="ideal-list">
-              <li>✓ Querés reducir medidas en zonas específicas</li>
-              <li>✓ Tenés adiposidad localizada</li>
-              <li>✓ Buscás definir tu silueta</li>
-              <li>✓ Querés potenciar tu rutina de ejercicio y alimentación</li>
-              <li>✓ Necesitás eliminar retención de líquidos</li>
-              <li>✓ Deseás mejorar tu figura para un evento especial</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Querés reducir medidas en zonas específicas</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Tenés adiposidad localizada</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Buscás definir tu silueta</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Querés potenciar tu rutina de ejercicio y alimentación</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Necesitás eliminar retención de líquidos</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Deseás mejorar tu figura para un evento especial</li>
             </ul>
             
             <div className="important-note">
-              <h3>📌 Importante</h3>
+              <h3><Icon icon={Icons.clipboard} size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} />Importante</h3>
               <p>
                 Los tratamientos reductores son un complemento ideal de hábitos saludables. 
                 Para resultados óptimos y duraderos, se recomienda combinarlos con 
