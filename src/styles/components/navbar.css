@@ -177,6 +177,7 @@
     transition: transform 0.3s ease;
     box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
+    z-index: 1000;
   }
   
   .navbar-menu.active {

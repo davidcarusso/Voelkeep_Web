@@ -194,6 +194,9 @@ const Navbar = () => {
             <Link to="/gift-card" className="navbar-link" onClick={closeMenu}>
               Gift Cards
             </Link>
+            <Link to="/preguntas-frecuentes" className="navbar-link" onClick={closeMenu}>
+              FAQ
+            </Link>
             <a 
               href={generateWhatsAppUrl('general')} 
               className="navbar-link" 

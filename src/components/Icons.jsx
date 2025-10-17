@@ -66,6 +66,11 @@ import {
   Feather,
   Beaker,
   Package,
+  HelpCircle,
+  CreditCard,
+  User,
+  HeartPulse,
+  Clipboard,
 } from 'lucide-react';
 
 // Exportar iconos por categoría
@@ -127,6 +132,7 @@ export const Icons = {
   clock: Clock,
   instagram: Instagram,
   message: MessageCircle,
+  messageCircle: MessageCircle,
   calendar: Calendar,
   home: Home,
   
@@ -138,6 +144,8 @@ export const Icons = {
   arrowRight: ArrowRight,
   check: Check,
   alert: AlertCircle,
+  helpCircle: HelpCircle,
+  user: User,
   
   // Otros
   gift: Gift,
@@ -146,6 +154,14 @@ export const Icons = {
   settings: Settings,
   document: FileText,
   sparkle: Sparkles,
+  target: Target,
+  star: Star,
+  shield: Shield,
+  creditCard: CreditCard,
+  heartPulse: HeartPulse,
+  clipboard: Clipboard,
+  labios: Smile,
+  relajacion: Flower2,
 };
 
 // Componente wrapper para iconos con tamaño y color consistente

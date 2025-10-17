@@ -17,7 +17,7 @@ const ServiceCard = ({
       <div className="service-image">
         <div className="service-icon">
           {iconComponent ? (
-            <Icon icon={iconComponent} size={40} />
+            <Icon icon={iconComponent} size={56} />
           ) : (
             icon
           )}

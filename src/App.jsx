@@ -13,6 +13,7 @@ import ScrollToTop from '@/components/ScrollToTop';
 import Home from '@/pages/Home';
 import GlossPeel from '@/pages/GlossPeel';
 import GiftCard from '@/pages/GiftCard';
+import FAQ from '@/pages/FAQ';
 import NotFound from '@/pages/NotFound';
 
 // Tratamientos Faciales
@@ -69,6 +70,7 @@ function App() {
             
             {/* Otros */}
             <Route path="/gift-card" element={<GiftCard />} />
+            <Route path="/preguntas-frecuentes" element={<FAQ />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
