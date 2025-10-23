@@ -77,18 +77,23 @@ const Navbar = () => {
 
   const servicios = {
     faciales: [
-      { nombre: 'Limpieza Profunda', ruta: '/limpieza-profunda' },
-      { nombre: 'Peeling Facial', ruta: '/peeling-facial' },
+      { nombre: 'Limpieza Facial Profunda', ruta: '/limpieza-profunda' },
+      { nombre: 'Peeling Químico', ruta: '/peeling-facial' },
+      { nombre: 'Gloss Peel', ruta: '/gloss-peel' },
+      { nombre: 'Peeling Enzimático', ruta: '/peeling-enzimatico' },
       { nombre: 'Dermaplaning', ruta: '/dermaplaning' },
       { nombre: 'Microneedling', ruta: '/microneedling' },
-      { nombre: 'Radiofrecuencia', ruta: '/radiofrecuencia' },
-      { nombre: 'Hidralips', ruta: '/hidralips' },
-      { nombre: 'Gloss Peel', ruta: '/gloss-peel' },
+      { nombre: 'Exosomas Facial', ruta: '/exosomas-facial' },
+      { nombre: 'Hydralips', ruta: '/hidralips' },
+      { nombre: 'Tratamiento para Acné', ruta: '/tratamiento-acne' },
+      { nombre: 'Radiofrecuencia Facial', ruta: '/radiofrecuencia' },
+      { nombre: 'Terapia con Luz LED', ruta: '/terapia-led' },
     ],
     corporales: [
-      { nombre: 'Reductores', ruta: '/reductores' },
-      { nombre: 'Reafirmantes', ruta: '/reafirmantes' },
-      { nombre: 'Anticelulíticos', ruta: '/anticeluliticos' },
+      { nombre: 'Limpieza Corporal', ruta: '/limpieza-corporal' },
+      { nombre: 'Peeling Corporal', ruta: '/peeling-corporal' },
+      { nombre: 'Exfoliación + Hidratación', ruta: '/exfoliacion-hidratacion' },
+      { nombre: 'Anticelulítico y Reafirmante', ruta: '/anticeluliticos' },
     ],
     asesoramiento: [
       { nombre: 'Asesoramiento Skincare', ruta: '/asesoramiento' },
@@ -136,7 +141,7 @@ const Navbar = () => {
                 <div className="dropdown-content">
                   <div className="dropdown-section">
                     <h4 className="dropdown-title">
-                      <Icon icon={Icons.sparkle} size={20} /> Tratamientos Faciales
+                      <Icon icon={Icons.sparkle} size={20} /> Faciales
                     </h4>
                     {servicios.faciales.map((servicio, index) => (
                       <Link 
@@ -152,7 +157,7 @@ const Navbar = () => {
                   
                   <div className="dropdown-section">
                     <h4 className="dropdown-title">
-                      <Icon icon={Icons.fuerza} size={20} /> Tratamientos Corporales
+                      <Icon icon={Icons.fuerza} size={20} /> Corporales
                     </h4>
                     {servicios.corporales.map((servicio, index) => (
                       <Link 
@@ -164,10 +169,10 @@ const Navbar = () => {
                         {servicio.nombre}
                       </Link>
                     ))}
-                  </div>
-                  
-                  <div className="dropdown-section">
-                    <h4 className="dropdown-title">
+                    
+                    <div className="dropdown-divider"></div>
+                    
+                    {/* <h4 className="dropdown-title">
                       <Icon icon={Icons.asesoramiento} size={20} /> Asesoramiento
                     </h4>
                     {servicios.asesoramiento.map((servicio, index) => (
@@ -180,9 +185,9 @@ const Navbar = () => {
                         {servicio.nombre}
                       </Link>
                     ))}
-                  </div>
-                  
-                  <div className="dropdown-section">
+                    
+                    <div className="dropdown-divider"></div> */}
+                    
                     <a href="/#tratamientos" className="dropdown-view-all" onClick={closeMenu}>
                       Ver todos los tratamientos →
                     </a>
