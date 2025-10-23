@@ -42,12 +42,22 @@ const routes = [
     priority: '0.8',
   },
   {
+    path: '/peeling-enzimatico',
+    changefreq: 'monthly',
+    priority: '0.8',
+  },
+  {
     path: '/dermaplaning',
     changefreq: 'monthly',
     priority: '0.8',
   },
   {
     path: '/microneedling',
+    changefreq: 'monthly',
+    priority: '0.8',
+  },
+  {
+    path: '/exosomas-facial',
     changefreq: 'monthly',
     priority: '0.8',
   },
@@ -61,19 +71,34 @@ const routes = [
     changefreq: 'monthly',
     priority: '0.8',
   },
+  {
+    path: '/tratamiento-acne',
+    changefreq: 'monthly',
+    priority: '0.8',
+  },
+  {
+    path: '/terapia-led',
+    changefreq: 'monthly',
+    priority: '0.8',
+  },
   // Tratamientos Corporales
   {
-    path: '/reductores',
-    changefreq: 'monthly',
-    priority: '0.8',
-  },
-  {
-    path: '/reafirmantes',
-    changefreq: 'monthly',
-    priority: '0.8',
-  },
-  {
     path: '/anticeluliticos',
+    changefreq: 'monthly',
+    priority: '0.8',
+  },
+  {
+    path: '/limpieza-corporal',
+    changefreq: 'monthly',
+    priority: '0.8',
+  },
+  {
+    path: '/peeling-corporal',
+    changefreq: 'monthly',
+    priority: '0.8',
+  },
+  {
+    path: '/exfoliacion-hidratacion',
     changefreq: 'monthly',
     priority: '0.8',
   },

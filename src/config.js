@@ -59,21 +59,28 @@ export const CONFIG = {
     // Tratamientos Faciales
     glossPeel: 'Hola! Quiero consultar sobre el tratamiento Gloss Peel',
     limpiezaProfunda: 'Hola! Quiero consultar sobre la Limpieza Facial Profunda',
-    peelingFacial: 'Hola! Quiero consultar sobre el Peeling Facial',
+    peelingFacial: 'Hola! Quiero consultar sobre el Peeling Químico',
+    peelingEnzimatico: 'Hola! Quiero consultar sobre el Peeling Enzimático',
     dermaplaning: 'Hola! Quiero consultar sobre el Dermaplaning',
     microneedling: 'Hola! Quiero consultar sobre el Microneedling',
-    radiofrecuencia: 'Hola! Quiero consultar sobre la Radiofrecuencia Multipolar',
-    hidralips: 'Hola! Quiero consultar sobre el tratamiento Hidralips',
+    exosomasFacial: 'Hola! Quiero consultar sobre el tratamiento de Exosomas Facial',
+    radiofrecuencia: 'Hola! Quiero consultar sobre la Radiofrecuencia Facial',
+    hidralips: 'Hola! Quiero consultar sobre el tratamiento Hydralips',
+    tratamientoAcne: 'Hola! Quiero consultar sobre el Tratamiento para Acné y Piel Seborreica',
+    terapiaLED: 'Hola! Quiero consultar sobre la Terapia con Luz LED',
     
     // Tratamientos Corporales
     reductores: 'Hola! Quiero consultar sobre los Tratamientos Reductores',
     reafirmantes: 'Hola! Quiero consultar sobre los Tratamientos Reafirmantes',
-    anticeluliticos: 'Hola! Quiero consultar sobre los Tratamientos Anticelulíticos',
+    anticeluliticos: 'Hola! Quiero consultar sobre el Tratamiento Anticelulítico y Reafirmante',
+    limpiezaCorporal: 'Hola! Quiero consultar sobre la Limpieza Corporal',
+    peelingCorporal: 'Hola! Quiero consultar sobre el Peeling Corporal',
+    exfoliacionHidratacion: 'Hola! Quiero consultar sobre el tratamiento de Exfoliación + Hidratación Corporal',
     
     // Asesoramiento
     asesoramiento: 'Hola! Quiero consultar sobre el Asesoramiento de Skincare personalizado',
     
-    // Legacy
+    // Legacy / Otros
     limpieza: 'Hola! Quiero consultar sobre la Limpieza Facial Profunda',
     ritual: 'Hola! Quiero consultar sobre el Ritual Corporal',
     giftCard: 'Hola! Quiero consultar sobre las Gift Cards de Voelkeep',

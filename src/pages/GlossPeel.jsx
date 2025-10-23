@@ -14,8 +14,8 @@ const GlossPeel = () => {
       <HeroSection
         badge="Tratamiento Estrella"
         title="Gloss Peel"
-        subtitle="Peeling facial suave y seguro"
-        description="Renovación celular profunda con productos magistrales. Apto para verano y pieles sensibles."
+        subtitle="Peeling suave con efecto glow inmediato"
+        description="Peeling suave con efecto 'glow' inmediato. Aporta luminosidad y uniformidad al tono de la piel. Apto para verano y especialmente indicado para pieles sensibles o con rosácea."
         whatsappKey="glossPeel"
         variant="gloss"
       />
@@ -26,9 +26,9 @@ const GlossPeel = () => {
           <h2 className="section-title scroll-reveal">Beneficios del Gloss Peel</h2>
           <div className="benefits-grid">
             <BenefitCard
-              iconComponent={Icons.renovacion}
-              title="Renovación celular"
-              description="Estimula la regeneración natural de la piel"
+              iconComponent={Icons.brillo}
+              title="Glow inmediato"
+              description="Luminosidad y uniformidad visible desde la primera sesión"
             />
             <BenefitCard
               iconComponent={Icons.verano}
@@ -36,14 +36,14 @@ const GlossPeel = () => {
               description="Peeling suave que podés usar todo el año"
             />
             <BenefitCard
-              iconComponent={Icons.brillo}
-              title="Brillo natural"
-              description="Recuperá la luminosidad de tu piel"
+              iconComponent={Icons.sensible}
+              title="Pieles sensibles"
+              description="Especialmente indicado para pieles sensibles o con rosácea"
             />
             <BenefitCard
               iconComponent={Icons.magistral}
-              title="Productos magistrales"
-              description="Formulaciones personalizadas de alta calidad"
+              title="Resultados naturales"
+              description="Renueva sin irritar, respetando tu tipo de piel"
             />
           </div>
         </div>

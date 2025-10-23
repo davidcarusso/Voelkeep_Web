@@ -58,26 +58,13 @@ const Home = () => {
           <div className="services-grid">
             
             <ServiceCard
-              iconComponent={Icons.glossPeel}
-              title="Gloss Peel"
-              description="Peeling facial suave y seguro, apto para verano y pieles sensibles. Recuperá el brillo natural de tu piel."
-              features={[
-                'Renovación celular profunda',
-                'Productos magistrales',
-                'Resultados inmediatos'
-              ]}
-              linkTo="/gloss-peel"
-              linkText="Conocer más"
-            />
-
-            <ServiceCard
               iconComponent={Icons.limpieza}
               title="Limpieza Facial Profunda"
-              description="El primer paso para una piel sana y luminosa. Elimina impurezas y células muertas."
+              description="Elimina impurezas, puntos negros y células muertas. Ideal como primer paso para potenciar otros tratamientos."
               features={[
-                'Vaporización y extracción',
-                'Exfoliación completa',
-                'Mascarilla personalizada'
+                'Mejora textura y luminosidad',
+                'Para todo tipo de piel',
+                'Base para otros tratamientos'
               ]}
               linkTo="/limpieza-profunda"
               linkText="Conocer más"
@@ -85,25 +72,51 @@ const Home = () => {
 
             <ServiceCard
               iconComponent={Icons.peeling}
-              title="Peeling Facial"
-              description="Renovación celular para mejorar textura, luminosidad y uniformidad de la piel."
+              title="Peeling Químico"
+              description="Renueva la piel con ácidos seleccionados. Trata manchas, acné, líneas finas y signos de envejecimiento."
               features={[
+                'Piel más uniforme y revitalizada',
                 'Reduce manchas y líneas',
-                'Mejora la textura',
-                'Diferentes intensidades'
+                'Adaptado a tu tipo de piel'
               ]}
               linkTo="/peeling-facial"
               linkText="Conocer más"
             />
 
             <ServiceCard
+              iconComponent={Icons.glossPeel}
+              title="Gloss Peel"
+              description="Peeling suave con efecto glow inmediato. Apto para verano y especialmente para pieles sensibles o con rosácea."
+              features={[
+                'Luminosidad inmediata',
+                'Apto para verano',
+                'Ideal para pieles sensibles'
+              ]}
+              linkTo="/gloss-peel"
+              linkText="Conocer más"
+            />
+
+            <ServiceCard
+              iconComponent={Icons.peeling}
+              title="Peeling Enzimático"
+              description="Exfoliación natural que remueve impurezas sin irritar. Ideal para pieles sensibles o con rosácea."
+              features={[
+                'Suave y no irritante',
+                'Ingredientes naturales',
+                'Para pieles reactivas'
+              ]}
+              linkTo="/peeling-enzimatico"
+              linkText="Conocer más"
+            />
+
+            <ServiceCard
               iconComponent={Icons.dermaplaning}
               title="Dermaplaning"
-              description="Piel de porcelana al instante. Elimina vello fino y células muertas sin dolor."
+              description="Exfoliación física con bisturí estéril. Piel extremadamente suave, luminosa y lista para absorber activos."
               features={[
-                'Piel ultra suave',
-                'Efecto inmediato',
-                'Sin tiempo de recuperación'
+                'Acabado uniforme y radiante',
+                'Elimina vello facial',
+                'Efecto inmediato'
               ]}
               linkTo="/dermaplaning"
               linkText="Conocer más"
@@ -112,39 +125,78 @@ const Home = () => {
             <ServiceCard
               iconComponent={Icons.microneedling}
               title="Microneedling"
-              description="Estimula colágeno y elastina naturalmente. Reduce cicatrices y mejora la textura."
+              description="Terapia de inducción de colágeno. Mejora firmeza, textura y reduce cicatrices de acné."
               features={[
-                'Regeneración natural',
-                'Reduce cicatrices de acné',
-                'Resultados progresivos'
+                'Resultados progresivos',
+                'Reduce cicatrices',
+                'Estimula colágeno'
               ]}
               linkTo="/microneedling"
               linkText="Conocer más"
             />
 
             <ServiceCard
-              iconComponent={Icons.radiofrecuencia}
-              title="Radiofrecuencia Multipolar"
-              description="Reafirma y rejuvenece sin cirugía. Estimula colágeno en capas profundas."
+              iconComponent={Icons.ciencia}
+              title="Exosomas Facial"
+              description="Tratamiento regenerador avanzado. Mejora textura, luminosidad y firmeza restaurando la vitalidad."
               features={[
-                'Efecto lifting natural',
-                'Sin dolor ni molestias',
-                'Resultados duraderos'
+                'Tecnología de vanguardia',
+                'Regeneración profunda',
+                'Anti-edad avanzado'
+              ]}
+              linkTo="/exosomas-facial"
+              linkText="Conocer más"
+            />
+
+            <ServiceCard
+              iconComponent={Icons.hidralips}
+              title="Hydralips"
+              description="Tratamiento hidratante y regenerador de labios. Aporta leve volumen y aspecto saludable sin inyecciones."
+              features={[
+                'Suavidad y volumen natural',
+                'Sin agujas',
+                'Ideal para labios resecos'
+              ]}
+              linkTo="/hidralips"
+              linkText="Conocer más"
+            />
+
+            <ServiceCard
+              iconComponent={Icons.limpieza}
+              title="Tratamiento para Acné"
+              description="Regula el exceso de sebo, reduce inflamación y previene brotes. Para pieles grasas o con tendencia acneica."
+              features={[
+                'Controla el sebo',
+                'Previene brotes',
+                'Piel equilibrada'
+              ]}
+              linkTo="/tratamiento-acne"
+              linkText="Conocer más"
+            />
+
+            <ServiceCard
+              iconComponent={Icons.radiofrecuencia}
+              title="Radiofrecuencia Facial"
+              description="Estimula colágeno mediante calor controlado. Mejora firmeza y redefine el óvalo facial."
+              features={[
+                'Efecto tensor visible',
+                'Sin procedimientos invasivos',
+                'Reduce líneas de expresión'
               ]}
               linkTo="/radiofrecuencia"
               linkText="Conocer más"
             />
 
             <ServiceCard
-              iconComponent={Icons.hidralips}
-              title="Hidralips"
-              description="Hidratación intensiva para labios suaves con brillo natural, sin inyecciones."
+              iconComponent={Icons.sparkle}
+              title="Terapia con Luz LED"
+              description="Complemento post-tratamiento. Favorece regeneración celular y potencia resultados."
               features={[
-                'Labios más suaves',
-                'Efecto gloss natural',
-                'Sin agujas'
+                'Diferentes colores por objetivo',
+                'No invasivo',
+                'Potencia otros tratamientos'
               ]}
-              linkTo="/hidralips"
+              linkTo="/terapia-led"
               linkText="Conocer más"
             />
 
@@ -157,62 +209,54 @@ const Home = () => {
           <div className="services-grid">
             
             <ServiceCard
-              iconComponent={Icons.reductores}
-              title="Tratamientos Reductores"
-              description="Modela tu figura y reduce volumen en zonas específicas del cuerpo."
+              iconComponent={Icons.limpieza}
+              title="Limpieza Corporal"
+              description="Remueve impurezas en espalda, glúteos o piernas. Ideal para acné corporal o preparación pre-tratamiento."
               features={[
-                'Reduce medidas',
-                'Elimina toxinas',
-                'Mejora la circulación'
+                'Espalda, glúteos o piernas',
+                'Trata acné corporal',
+                'Piel limpia y equilibrada'
               ]}
-              linkTo="/reductores"
+              linkTo="/limpieza-corporal"
               linkText="Conocer más"
             />
 
             <ServiceCard
-              iconComponent={Icons.reafirmantes}
-              title="Tratamientos Reafirmantes"
-              description="Recupera la firmeza y elasticidad de tu piel corporal."
+              iconComponent={Icons.peeling}
+              title="Peeling Corporal"
+              description="Renovación profunda de la piel del cuerpo. Estimula regeneración y mejora textura y luminosidad."
               features={[
-                'Combate la flacidez',
-                'Estimula colágeno',
-                'Piel más firme'
+                'Renueva la piel',
+                'Reduce asperezas',
+                'Atenúa manchas'
               ]}
-              linkTo="/reafirmantes"
+              linkTo="/peeling-corporal"
+              linkText="Conocer más"
+            />
+
+            <ServiceCard
+              iconComponent={Icons.hidratacion}
+              title="Exfoliación + Hidratación"
+              description="Ritual completo: exfoliación suave + hidratación profunda. Ideal antes de eventos o cambio de estación."
+              features={[
+                'Piel ultra suave',
+                'Nutrición profunda',
+                'Luminosidad renovada'
+              ]}
+              linkTo="/exfoliacion-hidratacion"
               linkText="Conocer más"
             />
 
             <ServiceCard
               iconComponent={Icons.anticeluliticos}
-              title="Tratamientos Anticelulíticos"
-              description="Reduce la celulitis y mejora la textura de la piel corporal."
+              title="Tratamiento Anticelulítico y Reafirmante"
+              description="Combina radiofrecuencia, técnicas manuales y activos específicos para reducir la celulitis, mejorar la circulación y tonificar los tejidos."
               features={[
-                'Reduce piel de naranja',
-                'Mejora circulación',
-                'Drenaje linfático'
+                'Reduce celulitis visible',
+                'Reafirma y tonifica',
+                'Mejora circulación'
               ]}
               linkTo="/anticeluliticos"
-              linkText="Conocer más"
-            />
-
-          </div>
-
-          {/* Asesoramiento */}
-          <h3 className="subsection-title scroll-reveal" style={{ marginTop: '4rem' }}>
-            <Icon icon={Icons.asesoramiento} size={28} /> Asesoramiento Personalizado
-          </h3>
-          <div className="services-grid">
-            
-            <ServiceCard
-              iconComponent={Icons.asesoramiento}
-              title="Asesoramiento de Skincare"
-              description="Diagnóstico profesional y diseño de rutina personalizada para tu piel."
-              features={[
-                'Diagnóstico completo',
-                'Rutina a tu medida',
-                'Seguimiento continuo'
-              ]}
-              linkTo="/asesoramiento"
               linkText="Conocer más"
             />
 

@@ -13,9 +13,9 @@ const Hidralips = () => {
       {/* Hero Section */}
       <HeroSection
         badge="Tratamiento de Labios"
-        title="Hidralips"
-        subtitle="Labios hidratados, suaves y con brillo natural"
-        description="Técnica de hidratación intensiva que mejora la textura, el color y el volumen natural de tus labios sin inyecciones."
+        title="Hydralips"
+        subtitle="Hidratación y regeneración sin inyecciones"
+        description="Tratamiento hidratante y regenerador de labios. Aporta un leve volumen, suavidad y aspecto saludable sin necesidad de inyecciones. Ideal para labios resecos o con grietas."
         whatsappKey="hidralips"
         variant="lips"
       />

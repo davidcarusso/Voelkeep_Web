@@ -14,8 +14,8 @@ const Microneedling = () => {
       <HeroSection
         badge="Tecnología Avanzada"
         title="Microneedling"
-        subtitle="Estimulá la producción natural de colágeno"
-        description="Técnica avanzada que utiliza microagujas para regenerar la piel desde adentro, mejorando textura, firmeza y elasticidad de forma natural."
+        subtitle="Terapia de inducción de colágeno"
+        description="Estimula la producción de colágeno y elastina mediante microperforaciones controladas. Mejora la firmeza, textura y elasticidad de la piel, reduciendo cicatrices, poros dilatados y marcas de acné. Resultados progresivos y naturales."
         whatsappKey="microneedling"
         variant="advanced"
       />

@@ -13,9 +13,9 @@ const Radiofrecuencia = () => {
       {/* Hero Section */}
       <HeroSection
         badge="Rejuvenecimiento No Invasivo"
-        title="Radiofrecuencia Multipolar"
-        subtitle="Reafirmá y rejuvenecé tu piel sin cirugía"
-        description="Tratamiento con energía electromagnética que estimula el colágeno profundo, mejorando la firmeza y elasticidad facial de forma natural y duradera."
+        title="Radiofrecuencia Facial"
+        subtitle="Firmeza y rejuvenecimiento sin cirugía"
+        description="Estimula la producción natural de colágeno y elastina mediante calor controlado. Mejora la firmeza, redefine el óvalo facial y reduce líneas de expresión. Proporciona un efecto tensor visible sin procedimientos invasivos."
         whatsappKey="radiofrecuencia"
         variant="lift"
       />

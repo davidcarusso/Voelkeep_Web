@@ -13,9 +13,9 @@ const LimpiezaProfunda = () => {
       {/* Hero Section */}
       <HeroSection
         badge="Tratamiento Base"
-        title="Limpieza Profunda"
+        title="Limpieza Facial Profunda"
         subtitle="El primer paso para una piel sana y luminosa"
-        description="Elimina impurezas, células muertas, exceso de sebo y puntos negros, permitiendo que la piel respire y absorba mejor los tratamientos posteriores."
+        description="Elimina impurezas, puntos negros y células muertas, mejorando la textura y luminosidad de la piel. Ideal para todo tipo de piel y como primer paso para potenciar otros tratamientos."
         whatsappKey="limpiezaProfunda"
         variant="clean"
       />

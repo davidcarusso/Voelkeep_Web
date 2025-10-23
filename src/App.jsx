@@ -23,11 +23,16 @@ import Dermaplaning from '@/pages/Dermaplaning';
 import Microneedling from '@/pages/Microneedling';
 import Radiofrecuencia from '@/pages/Radiofrecuencia';
 import Hidralips from '@/pages/Hidralips';
+import PeelingEnzimatico from '@/pages/PeelingEnzimatico';
+import ExosomasFacial from '@/pages/ExosomasFacial';
+import TratamientoAcne from '@/pages/TratamientoAcne';
+import TerapiaLED from '@/pages/TerapiaLED';
 
 // Tratamientos Corporales
-import Reductores from '@/pages/Reductores';
-import Reafirmantes from '@/pages/Reafirmantes';
 import Anticeluliticos from '@/pages/Anticeluliticos';
+import LimpiezaCorporal from '@/pages/LimpiezaCorporal';
+import PeelingCorporal from '@/pages/PeelingCorporal';
+import ExfoliacionHidratacion from '@/pages/ExfoliacionHidratacion';
 
 // Asesoramiento
 import Asesoramiento from '@/pages/Asesoramiento';
@@ -52,18 +57,23 @@ function App() {
             <Route path="/" element={<Home />} />
             
             {/* Tratamientos Faciales */}
-            <Route path="/gloss-peel" element={<GlossPeel />} />
             <Route path="/limpieza-profunda" element={<LimpiezaProfunda />} />
             <Route path="/peeling-facial" element={<PeelingFacial />} />
+            <Route path="/gloss-peel" element={<GlossPeel />} />
+            <Route path="/peeling-enzimatico" element={<PeelingEnzimatico />} />
             <Route path="/dermaplaning" element={<Dermaplaning />} />
             <Route path="/microneedling" element={<Microneedling />} />
-            <Route path="/radiofrecuencia" element={<Radiofrecuencia />} />
+            <Route path="/exosomas-facial" element={<ExosomasFacial />} />
             <Route path="/hidralips" element={<Hidralips />} />
+            <Route path="/tratamiento-acne" element={<TratamientoAcne />} />
+            <Route path="/radiofrecuencia" element={<Radiofrecuencia />} />
+            <Route path="/terapia-led" element={<TerapiaLED />} />
             
             {/* Tratamientos Corporales */}
-            <Route path="/reductores" element={<Reductores />} />
-            <Route path="/reafirmantes" element={<Reafirmantes />} />
             <Route path="/anticeluliticos" element={<Anticeluliticos />} />
+            <Route path="/limpieza-corporal" element={<LimpiezaCorporal />} />
+            <Route path="/peeling-corporal" element={<PeelingCorporal />} />
+            <Route path="/exfoliacion-hidratacion" element={<ExfoliacionHidratacion />} />
             
             {/* Asesoramiento */}
             <Route path="/asesoramiento" element={<Asesoramiento />} />

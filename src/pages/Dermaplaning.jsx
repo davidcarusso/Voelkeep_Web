@@ -14,8 +14,8 @@ const Dermaplaning = () => {
       <HeroSection
         badge="Efecto Inmediato"
         title="Dermaplaning"
-        subtitle="Piel de porcelana al instante"
-        description="Procedimiento no invasivo que elimina células muertas y vello facial fino, dejando tu piel ultra suave, luminosa y lista para absorber mejor los productos."
+        subtitle="Piel extremadamente suave y luminosa"
+        description="Exfoliación física con bisturí estéril que elimina células muertas y vello facial. Deja la piel extremadamente suave, luminosa y lista para absorber mejor los productos activos. Proporciona un acabado uniforme y radiante."
         whatsappKey="dermaplaning"
         variant="smooth"
       />

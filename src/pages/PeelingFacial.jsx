@@ -13,9 +13,9 @@ const PeelingFacial = () => {
       {/* Hero Section */}
       <HeroSection
         badge="Renovación Celular"
-        title="Peeling Facial"
-        subtitle="Mejorá la textura, luminosidad y uniformidad de tu piel"
-        description="Tratamiento de renovación celular con ácidos en concentraciones controladas para estimular la regeneración cutánea."
+        title="Peeling Químico"
+        subtitle="Renueva tu piel con ácidos seleccionados"
+        description="Renueva la piel mediante el uso de ácidos seleccionados según el tipo cutáneo. Ayuda a tratar manchas, acné, líneas finas y signos de envejecimiento, dejando la piel más uniforme y revitalizada."
         whatsappKey="peelingFacial"
         variant="renew"
       />

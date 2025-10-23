@@ -13,9 +13,9 @@ const Anticeluliticos = () => {
       {/* Hero Section */}
       <HeroSection
         badge="Tratamiento Corporal"
-        title="Tratamientos Anticelulíticos"
-        subtitle="Mejorá la textura de tu piel y reducí la celulitis"
-        description="Tratamientos específicos para reducir la apariencia de la celulitis, mejorando la microcirculación y la textura de la piel."
+        title="Tratamiento Corporal Anticelulítico y Reafirmante"
+        subtitle="Remodela tu silueta y reafirma tu piel"
+        description="Combina radiofrecuencia, técnicas manuales y activos específicos para reducir la celulitis, mejorar la circulación y tonificar los tejidos."
         whatsappKey="anticeluliticos"
         variant="smooth"
       />
