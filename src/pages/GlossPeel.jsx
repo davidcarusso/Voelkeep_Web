@@ -3,10 +3,12 @@ import HeroSection from '@/components/HeroSection';
 import BenefitCard from '@/components/BenefitCard';
 import CTASection from '@/components/CTASection';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { usePageViewTracking } from '@/hooks/usePageViewTracking';
 import { Icons, Icon } from '@/components/Icons';
 
 const GlossPeel = () => {
   useScrollReveal();
+  usePageViewTracking(true, 1.0); // Track page view
 
   return (
     <div data-page="gloss-peel">

@@ -1,6 +1,7 @@
 import { generateWhatsAppUrl } from '@/config';
 import { Link } from 'react-router-dom';
 import { Icon } from './Icons';
+import { trackWhatsAppConversion } from '@/hooks/useGoogleTagManager';
 
 const ServiceCard = ({ 
   icon, 
@@ -12,6 +13,12 @@ const ServiceCard = ({
   whatsappKey,
   iconComponent 
 }) => {
+  const handleWhatsAppClick = async (e) => {
+    e.preventDefault();
+    const whatsappUrl = generateWhatsAppUrl(whatsappKey);
+    await trackWhatsAppConversion(whatsappUrl, 100.0);
+  };
+
   return (
     <div className="service-card scroll-reveal">
       <div className="service-image">
@@ -43,6 +50,7 @@ const ServiceCard = ({
             className="service-link"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleWhatsAppClick}
           >
             {linkText} →
           </a>

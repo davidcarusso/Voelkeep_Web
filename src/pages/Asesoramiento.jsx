@@ -3,10 +3,12 @@ import HeroSection from '@/components/HeroSection';
 import BenefitCard from '@/components/BenefitCard';
 import CTASection from '@/components/CTASection';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { usePageViewTracking } from '@/hooks/usePageViewTracking';
 import { Icons, Icon } from '@/components/Icons';
 
 const Asesoramiento = () => {
   useScrollReveal();
+  usePageViewTracking();
 
   return (
     <div data-page="asesoramiento">

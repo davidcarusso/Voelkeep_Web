@@ -9,6 +9,12 @@ import ScrollProgress from '@/components/ScrollProgress';
 import BackToTop from '@/components/BackToTop';
 import ScrollToTop from '@/components/ScrollToTop';
 
+// Hooks
+import { useGoogleTagManager } from '@/hooks/useGoogleTagManager';
+
+// Config
+import { CONFIG } from '@/config';
+
 // Páginas
 import Home from '@/pages/Home';
 import GlossPeel from '@/pages/GlossPeel';
@@ -41,6 +47,9 @@ import Asesoramiento from '@/pages/Asesoramiento';
 import '@/styles/main.css';
 
 function App() {
+  // Inicializar Google Tag Manager
+  useGoogleTagManager(CONFIG.googleAds.trackingId);
+
   useEffect(() => {
     console.log('🌸 Voelkeep v2.0.0 - React Edition - Cargando...');
   }, []);

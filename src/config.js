@@ -12,6 +12,13 @@ import { Icons } from '@/components/Icons';
 
 export const CONFIG = {
   // ============================================
+  // GOOGLE TAG MANAGER / ANALYTICS
+  // ============================================
+  googleAds: {
+    trackingId: 'AW-17641216867',
+  },
+
+  // ============================================
   // INFORMACIÓN DE CONTACTO
   // ============================================
   contact: {

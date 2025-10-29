@@ -2,11 +2,20 @@ import { useState } from 'react';
 import { Icons, Icon } from '@/components/Icons';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { generateWhatsAppUrl } from '@/config';
+import { trackWhatsAppConversion } from '@/hooks/useGoogleTagManager';
+import { usePageViewTracking } from '@/hooks/usePageViewTracking';
 import '../styles/components/faq.css';
 
 const FAQ = () => {
   useScrollReveal();
+  usePageViewTracking();
   const [openIndex, setOpenIndex] = useState(null);
+
+  const handleWhatsAppClick = async (e) => {
+    e.preventDefault();
+    const whatsappUrl = generateWhatsAppUrl('general');
+    await trackWhatsAppConversion(whatsappUrl, 100.0);
+  };
 
   const toggleQuestion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -140,6 +149,7 @@ const FAQ = () => {
               className="cta-button"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleWhatsAppClick}
             >
               <Icon icon={Icons.phone} size={20} />
               Hacer una consulta

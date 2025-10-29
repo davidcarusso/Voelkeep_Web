@@ -1,28 +1,20 @@
 import { generateWhatsAppUrl } from '@/config';
+import { trackWhatsAppConversion } from '@/hooks/useGoogleTagManager';
 
 const WhatsAppButton = ({ messageKey = 'general', tooltipText = 'Consultá por WhatsApp' }) => {
-  const handleClick = () => {
-    // Tracking de clicks
-    console.log('📊 Event: WhatsApp Click', {
+  const handleClick = async (e) => {
+    e.preventDefault(); // Prevenir navegación inmediata
+    
+    const whatsappUrl = generateWhatsAppUrl(messageKey);
+    
+    // Tracking de conversión de WhatsApp
+    await trackWhatsAppConversion(whatsappUrl, 100.0);
+    
+    // Log para debugging
+    console.log('📊 WhatsApp Conversion Tracked', {
       source: 'floating_button',
       message: messageKey,
     });
-    
-    // Integración con Google Analytics (si está disponible)
-    if (typeof window.gtag !== 'undefined') {
-      window.gtag('event', 'WhatsApp Click', {
-        source: 'floating_button',
-        message: messageKey,
-      });
-    }
-    
-    // Integración con Facebook Pixel (si está disponible)
-    if (typeof window.fbq !== 'undefined') {
-      window.fbq('track', 'WhatsApp Click', {
-        source: 'floating_button',
-        message: messageKey,
-      });
-    }
   };
 
   return (

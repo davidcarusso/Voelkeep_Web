@@ -1,7 +1,8 @@
 import { generateWhatsAppUrl, CONFIG } from '@/config';
 import { Icon, Icons } from '@/components/Icons';
+import { trackWhatsAppConversion } from '@/hooks/useGoogleTagManager';
 
-const ContactInfo = ({ icon, iconComponent, title, children, href, isExternal = false }) => (
+const ContactInfo = ({ icon, iconComponent, title, children, href, isExternal = false, onClick }) => (
   <div className="info-item">
     <div className="info-icon">
       {iconComponent ? <Icon icon={iconComponent} size={24} /> : icon}
@@ -14,6 +15,7 @@ const ContactInfo = ({ icon, iconComponent, title, children, href, isExternal = 
             href={href}
             target={isExternal ? "_blank" : undefined}
             rel={isExternal ? "noopener noreferrer" : undefined}
+            onClick={onClick}
           >
             {children}
           </a>
@@ -26,6 +28,12 @@ const ContactInfo = ({ icon, iconComponent, title, children, href, isExternal = 
 );
 
 const LocationSection = () => {
+  const handleWhatsAppClick = async (e) => {
+    e.preventDefault();
+    const whatsappUrl = generateWhatsAppUrl('general');
+    await trackWhatsAppConversion(whatsappUrl, 100.0);
+  };
+
   return (
     <section className="location-section">
       <div className="container">
@@ -42,6 +50,7 @@ const LocationSection = () => {
               title="WhatsApp"
               href={generateWhatsAppUrl('general')}
               isExternal
+              onClick={handleWhatsAppClick}
             >
               {CONFIG.contact.phoneFormatted}
             </ContactInfo>

@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { generateWhatsAppUrl } from '@/config';
 import Icons, { Icon } from '@/components/Icons';
+import { trackWhatsAppConversion } from '@/hooks/useGoogleTagManager';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -69,6 +70,13 @@ const Navbar = () => {
     setIsMenuOpen(false);
     setIsDropdownOpen(false);
     document.body.style.overflow = '';
+  };
+
+  const handleWhatsAppClick = async (e, messageKey) => {
+    e.preventDefault();
+    const whatsappUrl = generateWhatsAppUrl(messageKey);
+    closeMenu();
+    await trackWhatsAppConversion(whatsappUrl, 100.0);
   };
 
   const toggleDropdown = () => {
@@ -207,7 +215,7 @@ const Navbar = () => {
               className="navbar-link" 
               target="_blank"
               rel="noopener noreferrer"
-              onClick={closeMenu}
+              onClick={(e) => handleWhatsAppClick(e, 'general')}
             >
               Contacto
             </a>
@@ -216,7 +224,7 @@ const Navbar = () => {
               className="navbar-cta"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={closeMenu}
+              onClick={(e) => handleWhatsAppClick(e, 'agendar')}
             >
               Agendar Turno
             </a>

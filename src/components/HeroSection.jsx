@@ -1,4 +1,5 @@
 import { generateWhatsAppUrl } from '@/config';
+import { trackWhatsAppConversion } from '@/hooks/useGoogleTagManager';
 
 const HeroSection = ({ 
   badge, 
@@ -12,6 +13,12 @@ const HeroSection = ({
 }) => {
   const heroClass = variant === 'default' ? 'hero' : `hero hero-${variant}`;
   const circleCount = variant === 'default' ? 3 : 2;
+
+  const handleWhatsAppClick = async (e) => {
+    e.preventDefault();
+    const whatsappUrl = generateWhatsAppUrl(whatsappKey);
+    await trackWhatsAppConversion(whatsappUrl, 100.0);
+  };
 
   return (
     <section className={heroClass}>
@@ -38,6 +45,7 @@ const HeroSection = ({
                   className="cta-button cta-primary"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={handleWhatsAppClick}
                 >
                   Consultar tratamiento
                 </a>

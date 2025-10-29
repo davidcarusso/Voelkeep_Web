@@ -7,11 +7,20 @@ import LocationSection from '@/components/LocationSection';
 import CTASection from '@/components/CTASection';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { useGoogleMapsLoader } from '@/hooks/useGoogleMapsLoader';
+import { trackWhatsAppConversion } from '@/hooks/useGoogleTagManager';
+import { usePageViewTracking } from '@/hooks/usePageViewTracking';
 import Icons, { Icon } from '@/components/Icons';
 
 const Home = () => {
   useScrollReveal();
   useGoogleMapsLoader();
+  usePageViewTracking();
+
+  const handleHeroWhatsAppClick = async (e) => {
+    e.preventDefault();
+    const whatsappUrl = generateWhatsAppUrl('agendar');
+    await trackWhatsAppConversion(whatsappUrl, 100.0);
+  };
 
   return (
     <div data-page="home">
@@ -38,6 +47,7 @@ const Home = () => {
                 className="cta-button cta-secondary"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleHeroWhatsAppClick}
               >
                 Agendar turno
               </a>

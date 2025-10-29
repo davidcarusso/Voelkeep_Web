@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { generateWhatsAppUrl } from '@/config';
 import { useEffect } from 'react';
+import { trackWhatsAppConversion } from '@/hooks/useGoogleTagManager';
 
 const NotFound = () => {
   useEffect(() => {
@@ -10,6 +11,12 @@ const NotFound = () => {
       document.body.classList.remove('error-page');
     };
   }, []);
+
+  const handleWhatsAppClick = async (e) => {
+    e.preventDefault();
+    const whatsappUrl = generateWhatsAppUrl('general');
+    await trackWhatsAppConversion(whatsappUrl, 100.0);
+  };
 
   return (
     <div className="not-found-page" data-page="404">
@@ -51,6 +58,7 @@ const NotFound = () => {
                 className="cta-button cta-outline"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleWhatsAppClick}
               >
                 Contactar por WhatsApp
               </a>
