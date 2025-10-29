@@ -654,6 +654,82 @@
   margin-bottom: 2rem;
 }
 
+/* Comparison Grid - Para comparar tratamientos */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.comparison-card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.comparison-card.highlight {
+  border: 2px solid var(--rosa-fuerte);
+  box-shadow: var(--shadow-md);
+  background: linear-gradient(135deg, rgba(231, 139, 160, 0.05), rgba(252, 228, 236, 0.1));
+}
+
+.comparison-card h3 {
+  font-size: 1.4rem;
+  color: var(--texto-oscuro);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--gris-medio);
+}
+
+.comparison-card.highlight h3 {
+  border-bottom-color: var(--rosa-fuerte);
+}
+
+.comparison-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comparison-list li {
+  padding: 0.8rem 0;
+  color: var(--texto-gris);
+  font-size: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.comparison-card.highlight .comparison-list li {
+  color: var(--texto-oscuro);
+  font-weight: 500;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--texto-gris);
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(231, 139, 160, 0.2), rgba(252, 228, 236, 0.4));
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  color: var(--rosa-fuerte);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .treatment-steps,
