@@ -1,0 +1,25 @@
+# robots.txt for Voelkeep - Centro de Cosmetología
+# Permitir acceso a todos los bots de búsqueda
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://voelkeep.com/sitemap.xml
+
+# Bloquear recursos innecesarios para crawlers
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /assets/*.map$
+
+# Permitir específicamente a Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Permitir a Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Rate limiting para crawlers más agresivos
+User-agent: *
+Crawl-delay: 1

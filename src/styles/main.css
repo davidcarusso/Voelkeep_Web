@@ -1,0 +1,271 @@
+/* ============================================
+   ESTILOS BASE Y RESET
+   ============================================ */
+@import './variables.css';
+@import './components/navbar.css';
+@import './components/whatsapp.css';
+@import './components/scroll-elements.css';
+@import './components/hero.css';
+@import './components/services.css';
+@import './components/carousel.css';
+@import './components/footer.css';
+@import './components/animations.css';
+@import './components/error.css';
+@import './components/treatment-pages.css';
+
+/* ============================================
+   RESET Y BASE
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--texto-oscuro);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-normal);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 100px 0;
+}
+
+/* ============================================
+   TIPOGRAFÍA
+   ============================================ */
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--magenta-oscuro);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--rosa-fuerte), var(--rosa-medio));
+  margin: 25px auto 0;
+  border-radius: 2px;
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+.cta-button {
+  display: inline-block;
+  padding: 18px 45px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-normal);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
+.cta-primary {
+  background: var(--blanco);
+  color: var(--magenta-oscuro);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.cta-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+  background: var(--rosa-pastel);
+}
+
+.cta-secondary {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--blanco);
+  border: 2px solid var(--blanco);
+  backdrop-filter: blur(10px);
+}
+
+.cta-secondary:hover {
+  background: var(--blanco);
+  color: var(--magenta-oscuro);
+  transform: translateY(-3px);
+}
+
+.cta-button-large {
+  display: inline-block;
+  padding: 25px 60px;
+  background: linear-gradient(135deg, var(--magenta-oscuro), var(--rosa-fuerte));
+  color: var(--blanco);
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow: var(--shadow-xl);
+  transition: all var(--transition-normal);
+}
+
+.cta-button-large:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 25px 70px rgba(139, 30, 90, 0.35);
+}
+
+/* ============================================
+   GRIDS
+   ============================================ */
+.services-grid,
+.reasons-grid,
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+.service-card,
+.reason-card,
+.testimonial-card {
+  background: var(--blanco);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.service-card:hover,
+.reason-card:hover,
+.testimonial-card:hover {
+  transform: translateY(-15px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* ============================================
+   SECCIONES ESPECÍFICAS
+   ============================================ */
+.featured-services {
+  background: var(--gris-claro);
+}
+
+.why-us {
+  background: var(--blanco);
+}
+
+.testimonials {
+  background: var(--gris-claro);
+}
+
+.location-section {
+  background: var(--blanco);
+}
+
+.final-cta {
+  background: linear-gradient(135deg, var(--magenta-oscuro), var(--rosa-fuerte));
+  color: var(--blanco);
+}
+
+.giftcard-banner {
+  background: linear-gradient(135deg, var(--rosa-pastel), var(--rosa-claro));
+  padding: 80px 0;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  section {
+    padding: 80px 0;
+  }
+  
+  .section-title {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .services-grid,
+  .reasons-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .cta-button {
+    padding: 15px 35px;
+    font-size: 1rem;
+  }
+  
+  .cta-button-large {
+    padding: 20px 45px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+  
+  section {
+    padding: 50px 0;
+  }
+  
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}

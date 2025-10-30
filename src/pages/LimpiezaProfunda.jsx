@@ -1,0 +1,113 @@
+import { generateWhatsAppUrl } from '@/config';
+import HeroSection from '@/components/HeroSection';
+import BenefitCard from '@/components/BenefitCard';
+import CTASection from '@/components/CTASection';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { usePageViewTracking } from '@/hooks/usePageViewTracking';
+import { Icons, Icon } from '@/components/Icons';
+
+const LimpiezaProfunda = () => {
+  useScrollReveal();
+  usePageViewTracking();
+
+  return (
+    <div data-page="limpieza-profunda">
+      {/* Hero Section */}
+      <HeroSection
+        badge="Tratamiento Base"
+        title="Limpieza Facial Profunda"
+        subtitle="El primer paso para una piel sana y luminosa"
+        description="Elimina impurezas, puntos negros y células muertas, mejorando la textura y luminosidad de la piel. Ideal para todo tipo de piel y como primer paso para potenciar otros tratamientos."
+        whatsappKey="limpiezaProfunda"
+        variant="clean"
+      />
+
+      {/* Detalles del Tratamiento */}
+      <section className="treatment-details">
+        <div className="container">
+          <div className="detail-content scroll-reveal">
+            <h2>¿Qué incluye el tratamiento?</h2>
+            <div className="treatment-steps">
+              <div className="step">
+                <span className="step-number">01</span>
+                <h3>Vaporización</h3>
+                <p>Apertura de poros para facilitar la limpieza profunda</p>
+              </div>
+              <div className="step">
+                <span className="step-number">02</span>
+                <h3>Extracción</h3>
+                <p>Eliminación profesional de impurezas y comedones</p>
+              </div>
+              <div className="step">
+                <span className="step-number">03</span>
+                <h3>Exfoliación</h3>
+                <p>Renovación de la superficie cutánea</p>
+              </div>
+              <div className="step">
+                <span className="step-number">04</span>
+                <h3>Mascarilla personalizada</h3>
+                <p>Aplicación específica según tu tipo de piel</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Beneficios */}
+      <section className="benefits-section">
+        <div className="container">
+          <h2 className="section-title scroll-reveal">Beneficios de la Limpieza Profunda</h2>
+          <div className="benefits-grid">
+            <BenefitCard
+              iconComponent={Icons.brillo}
+              title="Piel más luminosa"
+              description="Elimina células muertas revelando el brillo natural"
+            />
+            <BenefitCard
+              iconComponent={Icons.precision}
+              title="Poros visiblemente reducidos"
+              description="Limpieza profunda que minimiza la apariencia de poros"
+            />
+            <BenefitCard
+              iconComponent={Icons.hidratacion}
+              title="Mejor absorción"
+              description="Tu piel absorberá mejor los productos de cuidado"
+            />
+            <BenefitCard
+              iconComponent={Icons.natural}
+              title="Para todo tipo de piel"
+              description="Especialmente ideal para piel grasa o con poros dilatados"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Para quién es */}
+      <section className="ideal-for">
+        <div className="container">
+          <div className="ideal-content scroll-reveal">
+            <h2>Ideal para vos si tenés:</h2>
+            <ul className="ideal-list">
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Piel con tendencia grasa</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Puntos negros y comedones</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Poros dilatados</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Piel opaca o sin luminosidad</li>
+              <li><Icon icon={Icons.check} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> Ganas de comenzar una rutina de skincare</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Final */}
+      <CTASection
+        title="¿Querés empezar tu rutina de cuidado facial?"
+        description="La limpieza profunda es el primer paso. Consultá por este tratamiento y comenzá a cuidar tu piel."
+        buttonText="Agendar mi limpieza"
+        whatsappKey="limpiezaProfunda"
+        note={<><Icon icon={Icons.phone} size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '6px' }} /> Respuesta inmediata • Solo con turno previo</>}
+      />
+    </div>
+  );
+};
+
+export default LimpiezaProfunda;

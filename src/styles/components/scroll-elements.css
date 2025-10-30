@@ -1,0 +1,87 @@
+/* ============================================
+   COMPONENTE: SCROLL PROGRESS BAR
+   ============================================ */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  z-index: 1001;
+  pointer-events: none;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--magenta-oscuro), var(--rosa-fuerte), var(--rosa-medio));
+  width: 0%;
+  transition: width 0.1s ease;
+  box-shadow: 0 0 10px rgba(201, 76, 124, 0.5);
+}
+
+/* ============================================
+   COMPONENTE: BACK TO TOP BUTTON
+   ============================================ */
+
+.back-to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  background: var(--blanco);
+  border: 2px solid var(--rosa-fuerte);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 30, 90, 0.15);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: linear-gradient(135deg, var(--magenta-oscuro), var(--rosa-fuerte));
+  border-color: var(--magenta-oscuro);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(139, 30, 90, 0.3);
+}
+
+.back-to-top:hover svg {
+  stroke: var(--blanco);
+}
+
+.back-to-top svg {
+  stroke: var(--rosa-fuerte);
+  transition: stroke 0.3s ease;
+}
+
+.back-to-top:active {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    width: 45px;
+    height: 45px;
+    bottom: 90px;
+    right: 20px;
+  }
+  
+  .back-to-top svg {
+    width: 20px;
+    height: 20px;
+  }
+}
