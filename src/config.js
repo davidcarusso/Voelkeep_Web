@@ -143,6 +143,10 @@ export const CONFIG = {
   // CONFIGURACIÓN DE SEO
   // ============================================
   seo: {
+    siteName: 'Voelkeep',
+    siteUrl: 'https://www.voelkeep.com',
+    title: 'Voelkeep - Cosmetología Profesional | Buenos Aires',
+    description: 'Centro de cosmetología y estética profesional en Buenos Aires. Tratamientos faciales, corporales y productos magistrales. Gloss Peel, limpieza facial profunda y más.',
     keywords: [
       'cosmetología',
       'estética',
@@ -154,7 +158,8 @@ export const CONFIG = {
       'limpieza facial',
       'gift cards',
     ].join(', '),
-    ogImage: '/images/og-image.jpg',
+    logo: '/images/LogoPink.svg',
+    ogImage: '/images/LogoPink.svg',
     twitterHandle: '@voelkeep',
   },
 
