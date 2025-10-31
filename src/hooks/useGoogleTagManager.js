@@ -77,6 +77,20 @@ export const trackConversion = (conversionId, conversionData = {}) => {
  * @param {number} value - Valor de la conversión (default: 100)
  * @returns {Promise} Promise que se resuelve cuando el tracking está completo
  */
+// export const trackWhatsAppConversion = (url, value = 100.0) => {
+//   var callback = function () {
+//     if (typeof(url) != 'undefined') {
+//       window.location = url;
+//     }
+//   };
+//   gtag('event', 'conversion', {
+//       'send_to': 'AW-17641216867/0Be1CI-80rUbEOO2_ttB',
+//       'value': value,
+//       'currency': 'ARS',
+//       'event_callback': callback
+//   });
+// }
+
 export const trackWhatsAppConversion = (url, value = 100.0) => {
   return new Promise((resolve) => {
     if (window.gtag) {
