@@ -15,7 +15,7 @@ export const CONFIG = {
   // GOOGLE TAG MANAGER / ANALYTICS
   // ============================================
   googleAds: {
-    trackingId: 'AW-17641216867',
+    trackingId: 'AW-17655581814',
   },
 
   // ============================================

@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 /**
  * Custom hook para inicializar Google Tag Manager
- * @param {string} trackingId - ID de seguimiento de Google Ads (ej: 'AW-17641216867')
+ * @param {string} trackingId - ID de seguimiento de Google Ads (ej: 'AW-17655581814')
  */
 export const useGoogleTagManager = (trackingId) => {
   useEffect(() => {
@@ -77,19 +77,6 @@ export const trackConversion = (conversionId, conversionData = {}) => {
  * @param {number} value - Valor de la conversión (default: 100)
  * @returns {Promise} Promise que se resuelve cuando el tracking está completo
  */
-// export const trackWhatsAppConversion = (url, value = 100.0) => {
-//   var callback = function () {
-//     if (typeof(url) != 'undefined') {
-//       window.location = url;
-//     }
-//   };
-//   gtag('event', 'conversion', {
-//       'send_to': 'AW-17641216867/0Be1CI-80rUbEOO2_ttB',
-//       'value': value,
-//       'currency': 'ARS',
-//       'event_callback': callback
-//   });
-// }
 
 export const trackWhatsAppConversion = (url, value = 100.0) => {
   return new Promise((resolve) => {
@@ -103,7 +90,7 @@ export const trackWhatsAppConversion = (url, value = 100.0) => {
       };
 
       window.gtag('event', 'conversion', {
-        send_to: 'AW-17641216867/0Be1CI-80rUbEOO2_ttB',
+        send_to: 'AW-17655581814/zFTeCPi3v7cbEPaY6-JB',
         value: value,
         currency: 'ARS',
         event_callback: callback
@@ -135,7 +122,7 @@ export const trackPageViewConversion = (value = 1.0, pageName = '', additionalPa
     const currentPath = window.location.pathname;
     
     window.gtag('event', 'conversion', {
-      send_to: 'AW-17641216867/PaKKCJK80rUbEOO2_ttB',
+      send_to: 'AW-17655581814/ll6NCPu3v7cbEPaY6-JB',
       value: value,
       currency: 'ARS',
       // Parámetros personalizados para identificar la página
