@@ -1,13 +1,30 @@
+// vite.config.js with compression enabled
+// To use this config:
+// 1. Install: npm install -D vite-plugin-compression
+// 2. Replace your vite.config.js with this file
+
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
+import viteCompression from 'vite-plugin-compression';
 
 export default defineConfig({
   plugins: [
     react(),
-    // Note: Install vite-plugin-compression for production builds:
-    // npm install -D vite-plugin-compression
-    // Then uncomment the compression plugins below
+    // Gzip compression
+    viteCompression({
+      algorithm: 'gzip',
+      ext: '.gz',
+      threshold: 10240, // Only compress files larger than 10kb
+      deleteOriginFile: false,
+    }),
+    // Brotli compression (better compression than gzip)
+    viteCompression({
+      algorithm: 'brotliCompress',
+      ext: '.br',
+      threshold: 10240,
+      deleteOriginFile: false,
+    }),
   ],
   root: 'src',
   publicDir: '../public',

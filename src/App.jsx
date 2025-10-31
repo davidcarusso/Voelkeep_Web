@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 
 // Layouts y componentes globales
 import Navbar from '@/components/Navbar';
@@ -15,36 +15,52 @@ import { useGoogleTagManager } from '@/hooks/useGoogleTagManager';
 // Config
 import { CONFIG } from '@/config';
 
-// Páginas
+// Páginas principales (carga inmediata)
 import Home from '@/pages/Home';
-import GlossPeel from '@/pages/GlossPeel';
-import GiftCard from '@/pages/GiftCard';
-import FAQ from '@/pages/FAQ';
-import NotFound from '@/pages/NotFound';
 
-// Tratamientos Faciales
-import LimpiezaProfunda from '@/pages/LimpiezaProfunda';
-import PeelingFacial from '@/pages/PeelingFacial';
-import Dermaplaning from '@/pages/Dermaplaning';
-import Microneedling from '@/pages/Microneedling';
-import Radiofrecuencia from '@/pages/Radiofrecuencia';
-import Hidralips from '@/pages/Hidralips';
-import PeelingEnzimatico from '@/pages/PeelingEnzimatico';
-import ExosomasFacial from '@/pages/ExosomasFacial';
-import TratamientoAcne from '@/pages/TratamientoAcne';
-import TerapiaLED from '@/pages/TerapiaLED';
+// Lazy loading para otras páginas
+const GlossPeel = lazy(() => import('@/pages/GlossPeel'));
+const GiftCard = lazy(() => import('@/pages/GiftCard'));
+const FAQ = lazy(() => import('@/pages/FAQ'));
+const NotFound = lazy(() => import('@/pages/NotFound'));
 
-// Tratamientos Corporales
-import Anticeluliticos from '@/pages/Anticeluliticos';
-import LimpiezaCorporal from '@/pages/LimpiezaCorporal';
-import PeelingCorporal from '@/pages/PeelingCorporal';
-import ExfoliacionHidratacion from '@/pages/ExfoliacionHidratacion';
+// Tratamientos Faciales (lazy)
+const LimpiezaProfunda = lazy(() => import('@/pages/LimpiezaProfunda'));
+const PeelingFacial = lazy(() => import('@/pages/PeelingFacial'));
+const Dermaplaning = lazy(() => import('@/pages/Dermaplaning'));
+const Microneedling = lazy(() => import('@/pages/Microneedling'));
+const Radiofrecuencia = lazy(() => import('@/pages/Radiofrecuencia'));
+const Hidralips = lazy(() => import('@/pages/Hidralips'));
+const PeelingEnzimatico = lazy(() => import('@/pages/PeelingEnzimatico'));
+const ExosomasFacial = lazy(() => import('@/pages/ExosomasFacial'));
+const TratamientoAcne = lazy(() => import('@/pages/TratamientoAcne'));
+const TerapiaLED = lazy(() => import('@/pages/TerapiaLED'));
 
-// Asesoramiento
-import Asesoramiento from '@/pages/Asesoramiento';
+// Tratamientos Corporales (lazy)
+const Anticeluliticos = lazy(() => import('@/pages/Anticeluliticos'));
+const LimpiezaCorporal = lazy(() => import('@/pages/LimpiezaCorporal'));
+const PeelingCorporal = lazy(() => import('@/pages/PeelingCorporal'));
+const ExfoliacionHidratacion = lazy(() => import('@/pages/ExfoliacionHidratacion'));
+
+// Asesoramiento (lazy)
+const Asesoramiento = lazy(() => import('@/pages/Asesoramiento'));
 
 // Estilos
 import '@/styles/main.css';
+
+// Loading component
+const LoadingFallback = () => (
+  <div style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '60vh',
+    fontSize: '1.2rem',
+    color: 'var(--primary-color)'
+  }}>
+    Cargando...
+  </div>
+);
 
 function App() {
   // Inicializar Google Tag Manager
@@ -62,36 +78,38 @@ function App() {
         <Navbar />
         
         <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            
-            {/* Tratamientos Faciales */}
-            <Route path="/limpieza-profunda" element={<LimpiezaProfunda />} />
-            <Route path="/peeling-facial" element={<PeelingFacial />} />
-            <Route path="/gloss-peel" element={<GlossPeel />} />
-            <Route path="/peeling-enzimatico" element={<PeelingEnzimatico />} />
-            <Route path="/dermaplaning" element={<Dermaplaning />} />
-            <Route path="/microneedling" element={<Microneedling />} />
-            <Route path="/exosomas-facial" element={<ExosomasFacial />} />
-            <Route path="/hidralips" element={<Hidralips />} />
-            <Route path="/tratamiento-acne" element={<TratamientoAcne />} />
-            <Route path="/radiofrecuencia" element={<Radiofrecuencia />} />
-            <Route path="/terapia-led" element={<TerapiaLED />} />
-            
-            {/* Tratamientos Corporales */}
-            <Route path="/anticeluliticos" element={<Anticeluliticos />} />
-            <Route path="/limpieza-corporal" element={<LimpiezaCorporal />} />
-            <Route path="/peeling-corporal" element={<PeelingCorporal />} />
-            <Route path="/exfoliacion-hidratacion" element={<ExfoliacionHidratacion />} />
-            
-            {/* Asesoramiento */}
-            <Route path="/asesoramiento" element={<Asesoramiento />} />
-            
-            {/* Otros */}
-            <Route path="/gift-card" element={<GiftCard />} />
-            <Route path="/preguntas-frecuentes" element={<FAQ />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Suspense fallback={<LoadingFallback />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              
+              {/* Tratamientos Faciales */}
+              <Route path="/limpieza-profunda" element={<LimpiezaProfunda />} />
+              <Route path="/peeling-facial" element={<PeelingFacial />} />
+              <Route path="/gloss-peel" element={<GlossPeel />} />
+              <Route path="/peeling-enzimatico" element={<PeelingEnzimatico />} />
+              <Route path="/dermaplaning" element={<Dermaplaning />} />
+              <Route path="/microneedling" element={<Microneedling />} />
+              <Route path="/exosomas-facial" element={<ExosomasFacial />} />
+              <Route path="/hidralips" element={<Hidralips />} />
+              <Route path="/tratamiento-acne" element={<TratamientoAcne />} />
+              <Route path="/radiofrecuencia" element={<Radiofrecuencia />} />
+              <Route path="/terapia-led" element={<TerapiaLED />} />
+              
+              {/* Tratamientos Corporales */}
+              <Route path="/anticeluliticos" element={<Anticeluliticos />} />
+              <Route path="/limpieza-corporal" element={<LimpiezaCorporal />} />
+              <Route path="/peeling-corporal" element={<PeelingCorporal />} />
+              <Route path="/exfoliacion-hidratacion" element={<ExfoliacionHidratacion />} />
+              
+              {/* Asesoramiento */}
+              <Route path="/asesoramiento" element={<Asesoramiento />} />
+              
+              {/* Otros */}
+              <Route path="/gift-card" element={<GiftCard />} />
+              <Route path="/preguntas-frecuentes" element={<FAQ />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </main>
 
         <Footer />
